@@ -47,7 +47,7 @@ namespace Core.ViewModels
             _mLearningService = mLearningService;
 
             
-            Username = "aocsa";
+            Username = "hitec";
             Password = "1";
 
 
