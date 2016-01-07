@@ -868,7 +868,7 @@ namespace MLearning.Droid
 							verMapa.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight (35));
 							verMapa.SetTextColor (Color.ParseColor (Configuration.ListaColores [i % 6]));
 
-							test.AddView (verMapa);
+							//test.AddView (verMapa);
 							linearUnidad.AddView (test);
 							_listIconVerMap.Add (test);
 						}

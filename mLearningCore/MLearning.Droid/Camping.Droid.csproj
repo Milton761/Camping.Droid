@@ -416,6 +416,7 @@
     <AndroidAsset Include="Assets\icons\iconmap.png" />
     <AndroidAsset Include="Assets\icons\pause.png" />
     <AndroidAsset Include="Assets\icons\info.png" />
+    <AndroidAsset Include="Assets\icons\comillasa.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MLearning.Core\MLearning.Core.csproj">

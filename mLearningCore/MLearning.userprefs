@@ -1,8 +1,11 @@
 ﻿<Properties StartupItem="MLearning.Droid\Camping.Droid.csproj">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MLearning.Droid\Properties\AndroidManifest.xml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MLearning.Droid\Views\LOView.cs">
     <Files>
-      <File FileName="MLearning.Droid\Properties\AndroidManifest.xml" Line="1" Column="1" />
-      <File FileName="MLearning.Core\ViewModels\LoginViewModel.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Core\ViewModels\LoginViewModel.cs" Line="8" Column="20" />
+      <File FileName="MLearning.Core\ViewModels\MainViewModel.cs" Line="469" Column="24" />
+      <File FileName="MLearning.Droid\Views\MainView.cs" Line="1456" Column="3" />
+      <File FileName="MLearning.Droid\Views\WallView.cs" Line="871" Column="10" />
+      <File FileName="MLearning.Droid\Views\LOView.cs" Line="552" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.4C3AWN154L014669" />
@@ -11,6 +14,8 @@
       <Breakpoint file="/Users/aocsa/Documents/proyectos/milton/Hitec.Droid dec 4/mLearningCore/MLearning.Droid/Views/MainView.cs" line="764" column="1" />
       <Breakpoint file="/Users/aocsa/Documents/proyectos/milton/Hitec.Droid dec 4/mLearningCore/MLearning.Core/ViewModels/MainViewModel.cs" line="1269" column="1" />
       <Breakpoint file="/Users/aocsa/Documents/proyectos/milton/Hitec.Droid dec 4/mLearningCore/MLearning.Core/ViewModels/MainViewModel.cs" line="1284" column="10" />
+      <Breakpoint file="C:\Users\ImBonus\Documents\GitHub\Camping.Droid\mLearningCore\MLearning.Droid\Views\LOView.cs" line="469" column="1" />
+      <Breakpoint file="C:\Users\ImBonus\Documents\GitHub\Camping.Droid\mLearningCore\MLearning.Droid\Views\LOView.cs" line="546" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

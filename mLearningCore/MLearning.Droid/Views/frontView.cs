@@ -164,10 +164,10 @@ namespace MLearning.Droid
 			numTypes.Add ("4");
 			numTypes.Add ("9");
 
-			title.Add ("LAS RUTAS");
-			title.Add ("GUIA DE SERVICIOS");
-			title.Add ("GUIA DE IDENTIFICACION SILVESTRE");
-			title.Add ("CAMINO INCA EN CIFRAS");
+			title.Add ("Los 50 mejores campamentos");
+			title.Add ("La palabra del experto");
+			title.Add ("Preparando la salida");
+			title.Add ("Más información");
 
 			type.Add ("rutas");
 			type.Add ("guias");

@@ -875,7 +875,7 @@ namespace MLearning.Droid.Views
 
 			home.Name = "Home";
 			fotos.Name = "Fotos";
-			rutas.Name = "Rutas";
+			rutas.Name = "Los 50 mejores campamentos";
 
 			home.Asset = "icons/iconhome.png";
 			fotos.Asset = "icons/iconcamara.png";
@@ -986,9 +986,9 @@ namespace MLearning.Droid.Views
 			TaskItem caminoCifras = new TaskItem ();
 			TaskItem salir = new TaskItem ();
 
-			guiaServicios.Name = "Guia de servicios";
-			guiaSilvestre.Name = "Guia de vida silvestre";
-			caminoCifras.Name = "Camino inca en cifras";
+			guiaServicios.Name = "La palabra del experto";
+			guiaSilvestre.Name = "Preparando la salida";
+			caminoCifras.Name = "Más información";
 			salir.Name = "Salir";
 
 			guiaServicios.Asset = "icons/iconservicios.png";
@@ -1060,16 +1060,16 @@ namespace MLearning.Droid.Views
 
 			switch (index) {
 			case 0:
-				lo._txtCursoN.Text = "Las rutas";
+				lo._txtCursoN.Text = "Los 50 mejores campamentos";
 				break;
 			case 1:
-				lo._txtCursoN.Text = "Guía de Servicios";
+				lo._txtCursoN.Text = "La palabra del experto";
 				break;
 			case 2:
-				lo._txtCursoN.Text = "Guía de Identificación de Vida Silvestre";
+				lo._txtCursoN.Text = "Preparando la salida";
 				break;
 			case 3:
-				lo._txtCursoN.Text = "Las Cifras";
+				lo._txtCursoN.Text = "Más información";
 				break;
 
 			default:
@@ -1429,7 +1429,7 @@ namespace MLearning.Droid.Views
 
 				lo._txtCursoN.Text = vm.CirclesList[_currentCurso].name;
 
-				if (_currentCurso == 0 && _currentUnidad!=3) {
+				if ((_currentCurso == 0 && _currentUnidad!=3) || (_currentCurso == 1) || (_currentCurso == 2)) {
 
 					for (int i = 0; i < lo._listLinearUnidades.Count; i++) {
 						lo._listLinearUnidades [i].Click += lo_item_click;
