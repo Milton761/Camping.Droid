@@ -767,7 +767,7 @@ namespace MLearning.Droid
 				titleUnidad.LayoutParameters = new LinearLayout.LayoutParams (Configuration.getWidth (440), -2);
 
 
-				if (indexCurso == 2) {
+				/*if (indexCurso == 2) {
 					if (indexUnidad == 3) {
 						linearUnidad.Orientation = Orientation.Horizontal;
 						ImageIconMap icon = new ImageIconMap (context);
@@ -777,7 +777,7 @@ namespace MLearning.Droid
 						linearUnidad.AddView (icon);
 						_listIconMap.Add (icon);
 					}
-				}
+				} */
 
 				if (indexCurso == 3) {
 					titleUnidad.SetTextSize (textFormat,Configuration.getHeight(55));
@@ -822,7 +822,7 @@ namespace MLearning.Droid
 
 				linearContenido.AddView (linearContenidoIn);
 
-				if (indexCurso == 2) {
+				/*if (indexCurso == 2) {
 					linearContenidoIn.RemoveView (descriptionUnidad);
 					ImageView imgUnidad = new ImageView (context);
 					Picasso.With (context).Load (_listUnidades[i].ImageUrl).Resize(Configuration.getWidth(440),Configuration.getHeight(440)).Placeholder(context.Resources.GetDrawable (Resource.Drawable.progress_animation)).CenterInside().Into (imgUnidad);
@@ -830,7 +830,7 @@ namespace MLearning.Droid
 					linearContenidoIn.SetGravity (Android.Views.GravityFlags.Center);
 					linearUnidad.SetPadding (0, Configuration.getWidth (25),0, Configuration.getWidth (25));
 
-				}
+				} */
 
 				linearUnidad.AddView (linearContenido);
 
@@ -847,31 +847,7 @@ namespace MLearning.Droid
 						linearContenido.AddView (info);
 
 						
-						if (indexUnidad == 2 && i > 1 ) {
-							
-						} else {
-							
-							LinearLayout test = new LinearLayout (context);
-							test.LayoutParameters = new LinearLayout.LayoutParams (-1, -2);
-							test.SetGravity (Android.Views.GravityFlags.Center);
-							test.Tag = i;
-							test.SetX( Configuration.getWidth (100));
-							//test.SetPadding (Configuration.getWidth(30), Configuration.getWidth (25), Configuration.getWidth(30), Configuration.getWidth (25));
-
-
-						
-
-
-							TextView verMapa = new TextView (context);
-							verMapa.Text = "* Ver Mapa";
-							verMapa.Typeface = Typeface.CreateFromAsset (context.Assets, "fonts/ArcherMediumPro.otf");
-							verMapa.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight (35));
-							verMapa.SetTextColor (Color.ParseColor (Configuration.ListaColores [i % 6]));
-
-							//test.AddView (verMapa);
-							linearUnidad.AddView (test);
-							_listIconVerMap.Add (test);
-						}
+						 
 
 					} else {
 						titleUnidad.SetTextSize (textFormat,Configuration.getHeight(55));
