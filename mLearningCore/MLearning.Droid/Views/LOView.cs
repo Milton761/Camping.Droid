@@ -452,10 +452,12 @@ namespace MLearning.Droid.Views
 				if (s_listp != null) {
 
 
-
-					for (int j = 0; j < s_listp.Count; j++) {						
+				int j = vm._currentSection;
+				//	for (int j = 0; j < s_listp.Count; j++) {						
 
 						for (int k = 0; k < s_listp [j].PagesList.Count; k++) {
+
+				//		if (j == vm._currentSection) {
 
 							VerticalScrollViewPager scrollPager = new VerticalScrollViewPager (this);
 							scrollPager.setOnScrollViewListener (this); 
@@ -479,36 +481,36 @@ namespace MLearning.Droid.Views
 
 							linearScroll.AddView (front);
 
-						LinearLayout descriptionLayout = new LinearLayout (this);
-						descriptionLayout.LayoutParameters = new LinearLayout.LayoutParams (-1, -2);
-						descriptionLayout.SetPadding (space, 0, space, space);
-						descriptionLayout.Orientation = Orientation.Vertical;
+							LinearLayout descriptionLayout = new LinearLayout (this);
+							descriptionLayout.LayoutParameters = new LinearLayout.LayoutParams (-1, -2);
+							descriptionLayout.SetPadding (space, 0, space, space);
+							descriptionLayout.Orientation = Orientation.Vertical;
 
-						TextView titulo_detalle = new TextView (this);
-						titulo_detalle.Text = "Descripción";
-						titulo_detalle.Typeface =  Typeface.CreateFromAsset(this.Assets, "fonts/ArcherMediumPro.otf");
-						titulo_detalle.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(38));
-						titulo_detalle.SetTextColor(Color.ParseColor(Configuration.ListaColores [indice % 6]));
-						titulo_detalle.SetPadding (0, 0, 0, space);
-						descriptionLayout.AddView (titulo_detalle);
+							TextView titulo_detalle = new TextView (this);
+							titulo_detalle.Text = "Descripción";
+							titulo_detalle.Typeface = Typeface.CreateFromAsset (this.Assets, "fonts/ArcherMediumPro.otf");
+							titulo_detalle.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight (38));
+							titulo_detalle.SetTextColor (Color.ParseColor (Configuration.ListaColores [indice % 6]));
+							titulo_detalle.SetPadding (0, 0, 0, space);
+							descriptionLayout.AddView (titulo_detalle);
 
-						TextView detalle = new TextView (this);
-						detalle.TextFormatted = Html.FromHtml (slides[0].loparagraph);
-						detalle.Typeface =  Typeface.CreateFromAsset(this.Assets, "fonts/ArcherMediumPro.otf");
-						detalle.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(32));
-						descriptionLayout.AddView (detalle);
-
-
+							TextView detalle = new TextView (this);
+							detalle.TextFormatted = Html.FromHtml (slides [0].loparagraph);
+							detalle.Typeface = Typeface.CreateFromAsset (this.Assets, "fonts/ArcherMediumPro.otf");
+							detalle.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight (32));
+							descriptionLayout.AddView (detalle);
 
 
-						LinearLayout separationLinear = new LinearLayout (this);
-						separationLinear.LayoutParameters = new LinearLayout.LayoutParams (-1, 5);
-						separationLinear.SetBackgroundColor (Color.ParseColor ("#D8D8D8"));
-						separationLinear.Orientation = Orientation.Horizontal;
-						//separationLinear.SetPadding (0,0,0,50);
 
-						linearScroll.AddView (descriptionLayout);
-						linearScroll.AddView (separationLinear);
+
+							LinearLayout separationLinear = new LinearLayout (this);
+							separationLinear.LayoutParameters = new LinearLayout.LayoutParams (-1, 5);
+							separationLinear.SetBackgroundColor (Color.ParseColor ("#D8D8D8"));
+							separationLinear.Orientation = Orientation.Horizontal;
+							//separationLinear.SetPadding (0,0,0,50);
+
+							linearScroll.AddView (descriptionLayout);
+							linearScroll.AddView (separationLinear);
 
 							listFrontPager.Add (front);
 
@@ -520,7 +522,7 @@ namespace MLearning.Droid.Views
 							for (int m = 1; m < slides.Count; m++) {
 								LOSlideSource slidesource = new LOSlideSource (this);
 
-							var _id_ = vm.LOsInCircle [vm._currentUnidad].lo.color_id;
+								var _id_ = vm.LOsInCircle [vm._currentUnidad].lo.color_id;
 								is_main = !is_main;
 
 
@@ -576,10 +578,10 @@ namespace MLearning.Droid.Views
 							}
 
 
-
+					//	}
 						}
 
-					}
+					//}
 
 				} else {
 					Console.WriteLine ("ERROR");
@@ -613,7 +615,7 @@ namespace MLearning.Droid.Views
 			LOViewAdapter adapter = new LOViewAdapter (this, listaScroll);
 			viewPager.Adapter = adapter;
 			//viewPager.CurrentItem = IndiceSection;
-			viewPager.SetCurrentItem (vm._currentSection, true);
+			//viewPager.SetCurrentItem (vm._currentSection, true);
 		}
 		/*
 		public void  OnScrollChanged(VerticalScrollView scrollView, int l, int t, int oldl, int oldt) {
