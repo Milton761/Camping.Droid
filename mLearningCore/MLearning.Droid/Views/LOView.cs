@@ -79,14 +79,10 @@ namespace MLearning.Droid.Views
 			vm = this.ViewModel as LOViewModel;
 
 			int tam = Configuration.getWidth (80);
-			//bm_user = Configuration.getRoundedShape(Bitmap.CreateScaledBitmap(getBitmapFromAsset ("icons/nouser.png"), tam,tam, true),tam,tam);
-
-		//bmLike = Bitmap.CreateScaledBitmap (getBitmapFromAsset ("images/like.png"), Configuration.getWidth (43), Configuration.getWidth (35), true);
 
 			drBack = new BitmapDrawable(Bitmap.CreateScaledBitmap (getBitmapFromAsset ("images/fondocondiagonalm.png"), 640, 1136, true));
 			LinearLayout test = new LinearLayout (this);
 			test.LayoutParameters = new LinearLayout.LayoutParams (-1, -1);
-			//test.SetBackgroundResource (Resource.Drawable.splash);
 			test.SetBackgroundColor(Color.Black);
 			SetContentView (test);
 
@@ -119,7 +115,7 @@ namespace MLearning.Droid.Views
 			_mainLayout.AddView (_adLayout);
 
 			_adLayout.Click += delegate {
-				String url = "http://www.hi-tec.com/pe/";
+				String url = "https://www.facebook.com/HiTecPe/";
 				Intent i = new Intent (Intent.ActionView);
 				i.SetData (Android.Net.Uri.Parse (url));
 				this.StartActivity(i);
@@ -152,29 +148,12 @@ namespace MLearning.Droid.Views
 			viewPager = new ViewPager (this);
 			viewPagerIni = new ViewPager (this);
 
-
-			/*	layoutPanelScroll = new LinearLayout (this);
-			layoutPanelScroll.LayoutParameters = new LinearLayout.LayoutParams (-1,-2);	
-			layoutPanelScroll.SetBackgroundColor(Color.ParseColor("#ffffff"));
-			layoutPanelScroll.Orientation = Orientation.Vertical;
-*/
-			/*	scrollVertical = new VerticalScrollView (this);
-			scrollVertical.setOnScrollViewListener (this); 
-			scrollVertical.LayoutParameters = new ViewGroup.LayoutParams (-1, -1);
-
-			scrollVertical.SetX (0); scrollVertical.SetY (0);					
-
-
-			scrollVertical.AddView (layoutPanelScroll);*/
-			//mainLayoutIndice.AddView (scrollVertical);
 			mainLayoutIndice.SetX (0); mainLayoutIndice.SetY (0);
 			_mainLayout.AddView (mainLayoutIndice);
-			//mainLayout.AddView (scrollVertical);
 
-			//var vm = this.ViewModel as LOViewModel;
 
 			await vm.InitLoad();
-			//loadLOsInCircle(0);
+
 			LoadPagesDataSource();
 
 			viewPagerIni.SetOnPageChangeListener (new MyPageChangeListener (this,listFront));
@@ -463,13 +442,10 @@ namespace MLearning.Droid.Views
 		{
 
 
-			//LOViewModel vm = ViewModel as LOViewModel;
-			//var styles = new StyleConstants();
-			//vm.IsLoading.Execute(null);
+
 			bool is_main = true;
 			int space = Configuration.getWidth (30);
-		//	for (int i = 0; i < 3; i++)
-		//	{
+		
 			var s_listp = vm.LOsInCircle[vm._currentUnidad].stack.StacksList;
 				int indice = 0;
 
@@ -507,8 +483,6 @@ namespace MLearning.Droid.Views
 						descriptionLayout.LayoutParameters = new LinearLayout.LayoutParams (-1, -2);
 						descriptionLayout.SetPadding (space, 0, space, space);
 						descriptionLayout.Orientation = Orientation.Vertical;
-						//descriptionLayout.SetPadding (0, 0, 0, space);
-						//descriptionLayout.SetBackgroundColor (Color.AliceBlue);
 
 						TextView titulo_detalle = new TextView (this);
 						titulo_detalle.Text = "Descripción";
@@ -607,18 +581,12 @@ namespace MLearning.Droid.Views
 
 					}
 
-
-
-
 				} else {
 					Console.WriteLine ("ERROR");
 				}
 
 
-
-		//	}
 			mainLayoutPages.RemoveAllViews ();
-			//_progresD.Hide ();
 			mainLayoutPages.AddView (viewPager);
 			mainLayoutPages.SetX (0);
 			mainLayoutPages.SetY (0);
@@ -686,7 +654,6 @@ namespace MLearning.Droid.Views
 		{
 			Context _context;
 			List<FrontContainerView> listFront;
-			//ScrollViewHorizontal scroll;
 			public MyPageChangeListener (Context context, List<FrontContainerView> listFront)
 			{
 				_context = context;	
@@ -697,18 +664,13 @@ namespace MLearning.Droid.Views
 			#region IOnPageChangeListener implementation
 			public void OnPageScrollStateChanged (int p0)
 			{
-				Console.WriteLine (p0);
+				//Console.WriteLine (p0);
 			}
 
 			public void OnPageScrolled (int p0, float p1, int p2)
 			{
-
-				Console.WriteLine ("p0 = " + p0 + " p1 = " + p1 + " p2 = " + p2);
+				//Console.WriteLine ("p0 = " + p0 + " p1 = " + p1 + " p2 = " + p2);
 				listFront [p0].Imagen.SetX (p2 / 2);		
-				//if(p0+1<listFront.Count){
-				//	listFront [p0 + 1].Imagen.SetX (p2/2);
-				//}
-
 			}
 
 			public void OnPageSelected (int position)
@@ -736,13 +698,13 @@ namespace MLearning.Droid.Views
 			#region IOnPageChangeListener implementation
 			public void OnPageScrollStateChanged (int p0)
 			{
-				Console.WriteLine (p0);
+				//Console.WriteLine (p0);
 			}
 
 			public void OnPageScrolled (int p0, float p1, int p2)
 			{
 
-				Console.WriteLine ("p0 = " + p0 + " p1 = " + p1 + " p2 = " + p2);
+				//Console.WriteLine ("p0 = " + p0 + " p1 = " + p1 + " p2 = " + p2);
 				listFront [p0].Imagen.SetX (p2 / 2);		
 				//if(p0+1<listFront.Count){
 				//	listFront [p0 + 1].Imagen.SetX (p2/2);

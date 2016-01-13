@@ -25,7 +25,6 @@ namespace MLearning.Droid
 		RelativeLayout mainLayout;
 		LinearLayout contenLayout;
 
-
 		TextView titleHeader;
 		TextView content;
 
@@ -61,6 +60,50 @@ namespace MLearning.Droid
 
 			return bitmap;
 		}
+
+		private string _colorBackgroundTitle;
+		public string ColorBackgroundTitle{
+			get{return _colorBackgroundTitle; }	
+			set{
+				_colorBackgroundTitle = value;
+				titleHeader.SetBackgroundColor (Color.ParseColor (_colorBackgroundTitle));
+			}
+		}
+
+		private string _colorTitle;
+		public string ColorTitle{
+			get{ return _colorTitle;}
+			set{ _colorTitle = value;
+				titleHeader.SetTextColor (Color.ParseColor (_colorTitle));
+			}
+		}
+
+		private string _colorBackgroundDescription;
+		public string ColorBackgroundDescription{
+			get{return _colorBackgroundDescription; }	
+			set{
+				_colorBackgroundDescription = value;
+				content.SetBackgroundColor (Color.ParseColor (_colorBackgroundDescription));
+			}
+		}
+
+		private string _colorDescription;
+		public string ColorDescription{
+			get{ return _colorDescription;}
+			set{ _colorDescription = value;
+				content.SetTextColor (Color.ParseColor (_colorDescription));
+			}
+		}
+
+		private string _colorBackgroundTemplate;
+		public string ColorBackgroundTemplate{
+			get{return _colorBackgroundTemplate; }	
+			set{
+				_colorBackgroundTemplate = value;
+				mainLayout.SetBackgroundColor (Color.ParseColor (_colorBackgroundTemplate));
+			}
+		}
+
 		private string _color;
 		public string ColorTexto{
 			get{return _color; }
@@ -89,32 +132,27 @@ namespace MLearning.Droid
 			titleHeader.Typeface =  Typeface.CreateFromAsset(context.Assets, "fonts/ArcherMediumPro.otf");
 			content.Typeface =  Typeface.CreateFromAsset(context.Assets, "fonts/ArcherMediumPro.otf");
 
-			//titleHeader.Text = "El Perú cuenta con mas de 357000 tipos de aves";
-			//titleHeader.SetTextSize (textFormat, Configuration.getHeight (52));
 			titleHeader.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(38));
-
-			//content.Text = "Los factores geográficos, climáticos y evolutivos  convierten al Perú en el mejor lugar para realizar la observacion de aves(birthwaching) Tiene 1830 especies de pájaros(segun la lista oficial del SACC/CRAP), tambien es considerado el";
-			//	content.SetTextSize (textFormat, Configuration.getHeight (26));
 			content.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(32));;
 
 			contenLayout.AddView (titleHeader);
 			contenLayout.AddView(content);
 
-			//contenLayout.SetX (Configuration.getHeight (45));
 			int padW = Configuration.getWidth(30);
-			int padH = Configuration.getHeight (15);
-			//contenLayout.SetPadding (padW,padH,padW,padH);
+			int padH = Configuration.getHeight (5);
 
-			//contenLayout.SetY (Configuration.getWidth (12));
 			mainLayout.SetPadding (padW,padH,padW,padH);
 			mainLayout.AddView(contenLayout);
+			//mainLayout.SetBackgroundColor (Color.Cyan);
+
 		}
 
 		private string _title;
 		public string Title{
 			get{return _title; }
 			set{_title = value;
-				titleHeader.Text = _title;}
+				titleHeader.TextFormatted = Html.FromHtml(_title);
+			}
 
 		}
 
@@ -125,7 +163,6 @@ namespace MLearning.Droid
 			get{return _content; }
 			set{_content = value;
 				content.TextFormatted = Html.FromHtml (_content);
-				//content.Text = _content;
 			}
 
 		}

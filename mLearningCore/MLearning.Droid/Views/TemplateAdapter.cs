@@ -53,8 +53,8 @@ namespace MLearning.Droid
 
 			txtName.Text = item.content;
 			txtName.SetPadding (30, 0, 0, 0);
-			//txtName.SetTextColor (Color.ParseColor ("#ffffff"));
-			imgIcon.SetImageBitmap (Bitmap.CreateScaledBitmap (getBitmapFromAsset (item.im_vinheta), Configuration.getWidth (23), Configuration.getHeight (23), true));
+			txtName.SetTextColor (Color.Blue);
+			imgIcon.SetImageBitmap (Bitmap.CreateScaledBitmap (getBitmapFromAsset (item.im_vinheta), Configuration.getWidth (20), Configuration.getWidth (20), true));
 
 			linearItem.LayoutParameters = new LinearLayout.LayoutParams (-1, -2);
 			linearItem.Orientation = Orientation.Horizontal;

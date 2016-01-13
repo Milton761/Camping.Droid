@@ -70,7 +70,7 @@ namespace MLearning.Droid
 			mainLayout = new RelativeLayout (context);
 			mainLayout.LayoutParameters = new RelativeLayout.LayoutParams (-1,-1);
 			int padW = Configuration.getWidth(30);
-			int padH = Configuration.getHeight (15);
+			int padH = Configuration.getHeight (5);
 			mainLayout.SetPadding (padW,padH,padW,padH);
 
 			contentLinearLayout = new LinearLayout (context);
@@ -83,7 +83,6 @@ namespace MLearning.Droid
 			AutorHeader = new TextView (context);
 			content = new TextView (context);
 
-			//imHeader.LayoutParameters = new LinearLayout.LayoutParams (-2, -2);
 			titleHeader.LayoutParameters = new LinearLayout.LayoutParams (-2, -2);
 			AutorHeader.LayoutParameters = new LinearLayout.LayoutParams (-2, -2);
 			content.LayoutParameters = new LinearLayout.LayoutParams (-2, -2);
@@ -94,12 +93,13 @@ namespace MLearning.Droid
 			content.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(32));
 			content.Typeface = Typeface.CreateFromAsset(context.Assets, "fonts/ArcherMediumPro.otf");
 
-
-
-
 			contentLinearLayout.AddView (titleHeader);
-			contentLinearLayout.AddView (content);
 			contentLinearLayout.AddView (imHeader);
+			contentLinearLayout.AddView (content);
+
+			//titleHeader.SetBackgroundColor (Color.Red);
+			//imHeader.SetBackgroundResource (Color.Green);
+			//content.SetBackgroundColor (Color.Blue);
 
 			mainLayout.AddView (contentLinearLayout);
 
@@ -150,6 +150,7 @@ namespace MLearning.Droid
 
 			headerLinearLayout.AddView (titleHeader);
 			headerLinearLayout.AddView (AutorHeader);
+
 			headerLinearLayout.SetPadding (15, 0, 0, 10);
 			AutorHeader.SetPadding (0, 15, 0, 0);
 
@@ -252,7 +253,6 @@ namespace MLearning.Droid
 					contentLinearLayout.RemoveView (content);
 				}
 				content.TextFormatted = Html.FromHtml (_content);
-					//content.Text = _content;
 			}
 
 		}

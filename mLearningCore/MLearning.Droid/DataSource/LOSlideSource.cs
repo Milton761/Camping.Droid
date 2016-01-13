@@ -6,6 +6,7 @@ using MLearning.Droid;
 using Android.Views;
 using Android.Content;
 using Android.Widget;
+using System.Collections.Generic;
 
 namespace DataSource
 {
@@ -163,6 +164,29 @@ namespace DataSource
 			}
 		}
 
+		public List<string> parseContent (string content)
+		{
+			List<string> elements = new List<string>();
+
+			string[] words = content.Split (' ', '\t');
+
+			if (words [0] == "@") {
+				elements.Add (words[0]);//sign to parse
+				elements.Add (words[1]);//color backgound
+				elements.Add (words[2]);//color text
+			//	elements.Add (words[3]);//content
+
+				if (words.Length >= 3) {
+					_title = "";
+					for (int i = 3; i < words.Length; i++) {
+						_title += words [i] + " ";
+					}
+				}
+
+			}
+			return elements;
+		}
+
 
 		public RelativeLayout getViewSlide(){
 
@@ -179,11 +203,21 @@ namespace DataSource
 			}
 			if (_type == 2) {
 				Template2 plantilla = new Template2 (context);
+
+				List<string> elements = parseContent (_title);
+
+				if (elements.Count != 0 && elements [0] == "@") {
+					plantilla.ColorBackgroundTemplate = elements [1];
+					plantilla.ColorTitle = elements [2];
+					plantilla.ColorDescription = elements [2];
+				} else {
+					plantilla.ColorTexto = _colorS;
+				}
+
 				plantilla.Title = _title;
 				plantilla.Contenido = _paragraph;
-				plantilla.ColorTexto = _colorS;
 
-				//Console.WriteLine ("CREA PLANTILLAAAAAAAAA  222222");
+
 				return plantilla;
 
 			}
@@ -194,8 +228,6 @@ namespace DataSource
 				for (int i = 0; i < _itemize.Count; i++) {
 					lista[i]=_itemize[i].Text;
 				}
-				//string[] lista = {"sdfsdf sdfs fsdf sf sdfs"," dfsdfsdf sdfsd fsd ds"," fsdf sfsdf sdfsd"," fdsfsdf sdfsdf sdfsf"};
-				//Console.WriteLine ("CREA PLANTILLAAAAAAAAA  333333");
 				plantilla.ListItems = lista;
 				return plantilla;
 			}

@@ -26,7 +26,7 @@ namespace MLearning.Droid
 
 		LinearLayout linearBarra;
 		LinearLayout linearTextContainer;
-		LinearLayout linearAll;
+		RelativeLayout linearAll;
 
 		int Altura =0;
 
@@ -40,11 +40,11 @@ namespace MLearning.Droid
 
 		void Initialize ()
 		{
-
+			var textFormatdip = Android.Util.ComplexUnitType.Dip;
 			this.LayoutParameters = new RelativeLayout.LayoutParams (-1,-2);
 			this.SetGravity (GravityFlags.Center);
 
-			linearAll = new LinearLayout (context);
+			linearAll = new RelativeLayout (context);
 			linearTextContainer= new LinearLayout (context);
 			linearBarra = new LinearLayout (context);
 
@@ -53,33 +53,45 @@ namespace MLearning.Droid
 			imgBarra = new ImageView (context);
 			imgComilla = new ImageView (context);
 
-			linearAll.LayoutParameters = new LinearLayout.LayoutParams (Configuration.getWidth (582), -2);
-			linearTextContainer.LayoutParameters = new LinearLayout.LayoutParams (Configuration.getWidth(552),-2);
+			linearAll.LayoutParameters = new RelativeLayout.LayoutParams (-1, -1);
+
+			linearTextContainer.LayoutParameters = new LinearLayout.LayoutParams (Configuration.getWidth(500),-2);
+
 			linearBarra.LayoutParameters = new LinearLayout.LayoutParams (Configuration.getWidth(30),-2);
 
-			linearAll.Orientation = Orientation.Horizontal;
 			linearBarra.Orientation = Orientation.Vertical;
 			linearTextContainer.Orientation = Orientation.Vertical;
 
-			linearAll.SetGravity (GravityFlags.Center);
+			//linearAll.SetGravity (GravityFlags.Center);
 			//linearBarra.SetGravity (GravityFlags.CenterHorizontal);
 			linearTextContainer.SetGravity (GravityFlags.CenterVertical);
 
 			//txtPhrase.SetTextSize (ComplexUnitType.Px, Configuration.getHeight (40));
 			//txtAuthor.SetTextSize(ComplexUnitType.Px, Configuration.getHeight (30));
 
-			txtPhrase.SetTextSize (ComplexUnitType.Dip, 21.0f);
-			txtAuthor.SetTextSize(ComplexUnitType.Dip, 16.0f);
+			txtPhrase.Typeface =  Typeface.CreateFromAsset(context.Assets, "fonts/ArcherMediumPro.otf");
+			txtPhrase.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(35));
 
+
+			txtAuthor.SetTextSize(ComplexUnitType.Dip, 16.0f);
 			txtAuthor.SetTextColor (Color.ParseColor("#b0afb5"));
 
-			linearBarra.AddView (imgComilla);
+			//linearBarra.AddView (imgComilla);
 			//linearBarra.AddView (imgBarra);
 			linearTextContainer.AddView (txtPhrase);
 			linearTextContainer.AddView (txtAuthor);
 
-			linearAll.AddView (linearBarra);
+			//linearAll.AddView (linearBarra);
+
+			linearAll.AddView (imgComilla);
 			linearAll.AddView (linearTextContainer);
+			linearTextContainer.SetX (Configuration.getWidth (35));
+
+
+			int padW = Configuration.getWidth(30);
+			int padH = Configuration.getHeight (30);
+			linearAll.SetPadding (padW,padH,padW,padH);
+			//linearAll.SetBackgroundColor (Color.Blue);
 
 			this.AddView (linearAll);
 
@@ -110,7 +122,7 @@ namespace MLearning.Droid
 			get{ return _imagenComilla;}
 			set{ _imagenComilla = value;
 
-				imgComilla.SetImageBitmap(Bitmap.CreateScaledBitmap (getBitmapFromAsset (_imagenComilla), Configuration.getWidth( 30), Configuration.getHeight (30), true));
+				imgComilla.SetImageBitmap(Bitmap.CreateScaledBitmap (getBitmapFromAsset (_imagenComilla), Configuration.getWidth( 30), Configuration.getHeight (26), true));
 			}
 		}
 
