@@ -31,7 +31,11 @@ namespace MLearning.Droid
 		int widthInDp;
 		int heightInDp;
 
+	
+
 		Context context;
+
+		public LinearLayout textContent;
 
 		public Template2 (Context context) :
 		base (context)
@@ -133,7 +137,10 @@ namespace MLearning.Droid
 			content.Typeface =  Typeface.CreateFromAsset(context.Assets, "fonts/ArcherMediumPro.otf");
 
 			titleHeader.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(38));
-			content.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(32));;
+			content.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(32));
+
+			textContent = new LinearLayout (context);
+			textContent.LayoutParameters = new LinearLayout.LayoutParams (-2, -2);
 
 			contenLayout.AddView (titleHeader);
 			contenLayout.AddView(content);
@@ -163,7 +170,21 @@ namespace MLearning.Droid
 			get{return _content; }
 			set{_content = value;
 				content.TextFormatted = Html.FromHtml (_content);
+	                
+				    
+				ViewTreeObserver vto = contenLayout.ViewTreeObserver;
+				int H = 0;
+				vto.GlobalLayout += (sender, args) =>
+				{     
+					H = contenLayout.Height;
+					Console.WriteLine ("TAM::::" + H );
+					contenLayout.LayoutParameters.Height = H-Configuration.getHeight(40);
+
+				};  
+				//contenLayout.LayoutParameters = new LinearLayout.LayoutParams (-2, H);
+
 			}
+
 
 		}
 	}

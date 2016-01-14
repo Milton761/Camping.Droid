@@ -194,8 +194,9 @@ namespace DataSource
 				Template1 plantilla = new Template1 (context);
 				plantilla.Title = _title;
 				plantilla.Author = _author;
-				plantilla.Contenido = _paragraph;
+
 				plantilla.ImageUrl = _imageurl;
+				plantilla.Contenido = _paragraph;
 				plantilla.ColorTexto = _colorS;
 				//Console.WriteLine ("CREA PLANTILLAAAAAAAAA  111111");
 				return plantilla;
@@ -216,7 +217,6 @@ namespace DataSource
 
 				plantilla.Title = _title;
 				plantilla.Contenido = _paragraph;
-
 
 				return plantilla;
 

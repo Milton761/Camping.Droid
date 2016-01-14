@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camping.Droid", "MLearning.Droid\Camping.Droid.csproj", "{328AE02E-C12E-4720-BDB6-37891AAB4CE8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiaCamping", "MLearning.Droid\GuiaCamping.csproj", "{328AE02E-C12E-4720-BDB6-37891AAB4CE8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLearning.Core", "MLearning.Core\MLearning.Core.csproj", "{5A3B79A2-507C-489B-9DEB-4710A75677F3}"
 EndProject
