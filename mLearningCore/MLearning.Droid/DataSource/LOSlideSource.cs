@@ -238,10 +238,10 @@ namespace DataSource
 			}
 			if (_type == 5) {
 				PhraseView plantilla = new PhraseView (context);
-				plantilla.Author = _author;
+				//plantilla.Author = _author;
 				plantilla.Phrase = _paragraph;
-				plantilla.ImagenComilla = "icons/comillasa.png";
-				plantilla.ImagenBarra = "icons/lineafraseamarilla.png";
+				//plantilla.ImagenComilla = "icons/comillasa.png";
+				//plantilla.ImagenBarra = "icons/lineafraseamarilla.png";
 				//Console.WriteLine ("CREA PLANTILLAAAAAAAAA  5");
 				return plantilla;
 

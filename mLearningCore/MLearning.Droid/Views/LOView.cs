@@ -475,6 +475,8 @@ namespace MLearning.Droid.Views
 
 							front.Title = s_listp [j].PagesList [k].page.title;
 							front.Description = s_listp [j].PagesList [k].page.description;
+
+
 							var slides = s_listp [j].PagesList [k].content.lopage.loslide;
 							front.setBack (drBack);
 
@@ -500,6 +502,15 @@ namespace MLearning.Droid.Views
 							detalle.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight (32));
 							descriptionLayout.AddView (detalle);
 
+							ViewTreeObserver vto = detalle.ViewTreeObserver;
+							int H = 0;
+							vto.GlobalLayout += (sender, args) =>
+							{     
+								H = detalle.Height;
+								Console.WriteLine ("TAM:::1:" + H );
+								detalle.LayoutParameters.Height = H-Configuration.getHeight(60);
+
+							};  
 
 
 

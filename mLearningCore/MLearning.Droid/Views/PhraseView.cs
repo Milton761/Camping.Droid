@@ -24,9 +24,8 @@ namespace MLearning.Droid
 		ImageView imgBarra;
 		Context context;
 
-		LinearLayout linearBarra;
-		LinearLayout linearTextContainer;
-		RelativeLayout linearAll;
+		RelativeLayout mainLayout;
+		LinearLayout contentLinearLayout;
 
 		int Altura =0;
 
@@ -34,68 +33,55 @@ namespace MLearning.Droid
 		base (context)
 		{
 			this.context = context;
-			Initialize ();
+			ini ();
+			//Initialize ();
 		}
 
-
-		void Initialize ()
+		void ini()
 		{
 			var textFormatdip = Android.Util.ComplexUnitType.Dip;
-			this.LayoutParameters = new RelativeLayout.LayoutParams (-1,-2);
-			this.SetGravity (GravityFlags.Center);
 
-			linearAll = new RelativeLayout (context);
-			linearTextContainer= new LinearLayout (context);
-			linearBarra = new LinearLayout (context);
 
-			txtAuthor = new TextView (context);
+			mainLayout = new RelativeLayout (context);
+			mainLayout.LayoutParameters = new RelativeLayout.LayoutParams (-1,-1);
+			int padW = Configuration.getWidth(30);
+			int padH = Configuration.getHeight (0);
+			mainLayout.SetPadding (padW,padH,padW,padH);
+			mainLayout.SetGravity(GravityFlags.CenterVertical);
+
+
+			contentLinearLayout = new LinearLayout (context);
+			contentLinearLayout.LayoutParameters = new LinearLayout.LayoutParams (-1, -1);
+			contentLinearLayout.Orientation = Orientation.Vertical;
+			contentLinearLayout.SetGravity (GravityFlags.Center);
+
+
 			txtPhrase = new TextView (context);
-			imgBarra = new ImageView (context);
-			imgComilla = new ImageView (context);
-
-			linearAll.LayoutParameters = new RelativeLayout.LayoutParams (-1, -1);
-
-			linearTextContainer.LayoutParameters = new LinearLayout.LayoutParams (Configuration.getWidth(500),-2);
-
-			linearBarra.LayoutParameters = new LinearLayout.LayoutParams (Configuration.getWidth(30),-2);
-
-			linearBarra.Orientation = Orientation.Vertical;
-			linearTextContainer.Orientation = Orientation.Vertical;
-
-			//linearAll.SetGravity (GravityFlags.Center);
-			//linearBarra.SetGravity (GravityFlags.CenterHorizontal);
-			linearTextContainer.SetGravity (GravityFlags.CenterVertical);
-
-			//txtPhrase.SetTextSize (ComplexUnitType.Px, Configuration.getHeight (40));
-			//txtAuthor.SetTextSize(ComplexUnitType.Px, Configuration.getHeight (30));
-
+			txtPhrase.LayoutParameters = new LinearLayout.LayoutParams (Configuration.getWidth (400), -2);
 			txtPhrase.Typeface =  Typeface.CreateFromAsset(context.Assets, "fonts/ArcherMediumPro.otf");
 			txtPhrase.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(35));
+			txtPhrase.SetTextColor (Color.Red);
 
 
-			txtAuthor.SetTextSize(ComplexUnitType.Dip, 16.0f);
-			txtAuthor.SetTextColor (Color.ParseColor("#b0afb5"));
 
-			//linearBarra.AddView (imgComilla);
-			//linearBarra.AddView (imgBarra);
-			linearTextContainer.AddView (txtPhrase);
-			linearTextContainer.AddView (txtAuthor);
+			ImageView background = new ImageView (context);
+			background.SetImageBitmap (Bitmap.CreateScaledBitmap (getBitmapFromAsset ("images/steps.png"), 250,390, true));
 
-			//linearAll.AddView (linearBarra);
+			LinearLayout backgroundLayout = new LinearLayout (context);
+			backgroundLayout.LayoutParameters = new LinearLayout.LayoutParams (-1, -2);
+			backgroundLayout.Orientation = Orientation.Vertical;
+			backgroundLayout.SetGravity (GravityFlags.CenterHorizontal);
+			backgroundLayout.AddView (background);
 
-			linearAll.AddView (imgComilla);
-			linearAll.AddView (linearTextContainer);
-			linearTextContainer.SetX (Configuration.getWidth (35));
+			contentLinearLayout.AddView (txtPhrase);
 
-
-			int padW = Configuration.getWidth(30);
-			int padH = Configuration.getHeight (30);
-			linearAll.SetPadding (padW,padH,padW,padH);
-			//linearAll.SetBackgroundColor (Color.Blue);
-
-			this.AddView (linearAll);
+			mainLayout.AddView (backgroundLayout);
+			mainLayout.AddView (contentLinearLayout);
+			this.AddView (mainLayout);
 
 		}
+
+
 
 		private String _phrase;
 		public String Phrase{
