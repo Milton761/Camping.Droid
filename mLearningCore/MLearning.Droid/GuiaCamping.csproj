@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MLearning.Droid</RootNamespace>
-    <AssemblyName>CaminoInca</AssemblyName>
+    <AssemblyName>Camping Peru</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
@@ -237,6 +237,7 @@
     <Compile Include="Views\ImageIconMap.cs" />
     <Compile Include="Views\LinearLayoutLO.cs" />
     <Compile Include="Views\JustifiedTextView.cs" />
+    <Compile Include="Resources\AddResources.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -387,10 +388,7 @@
     <AndroidAsset Include="Assets\images\header3.png" />
     <AndroidAsset Include="Assets\images\header4.png" />
     <AndroidAsset Include="Assets\images\mapa.png" />
-    <AndroidAsset Include="Assets\images\ad1.jpg" />
-    <AndroidAsset Include="Assets\images\ad2.jpg" />
     <AndroidAsset Include="Assets\images\footerad.jpg" />
-    <AndroidAsset Include="Assets\images\ad3.jpg" />
     <AndroidAsset Include="Assets\database\cache.db" />
     <AndroidAsset Include="Assets\images\4header.png" />
     <AndroidAsset Include="Assets\images\3header.png" />
@@ -419,6 +417,12 @@
     <AndroidAsset Include="Assets\icons\comillasa.png" />
     <AndroidAsset Include="Assets\icons\circulob.png" />
     <AndroidAsset Include="Assets\images\steps.png" />
+    <AndroidAsset Include="Assets\images\ad4.jpg" />
+    <AndroidAsset Include="Assets\images\ad5.jpg" />
+    <AndroidAsset Include="Assets\images\ad6.jpg" />
+    <AndroidAsset Include="Assets\images\ad1.jpg" />
+    <AndroidAsset Include="Assets\images\ad2.jpg" />
+    <AndroidAsset Include="Assets\images\ad3.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MLearning.Core\MLearning.Core.csproj">

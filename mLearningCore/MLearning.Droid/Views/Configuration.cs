@@ -2,11 +2,16 @@
 using Android.Graphics;
 using System.Net;
 using Android.Graphics.Drawables;
+using Android.Widget;
+using Android.Content;
+using MLearning.Core.Services;
+using System.Collections.Generic;
 
 namespace MLearning.Droid
 {
 	public class Configuration
 	{
+		public static IMLearningService _mLearningService;
 		public static int DIMENSION_DESING_WIDTH= 640;
 		public static int DIMENSION_DESING_HEIGHT= 1136; 
 		public static int WIDTH_PIXEL;
@@ -22,11 +27,14 @@ namespace MLearning.Droid
 		public static String naranja = "#ff9600";
 		public static String rosa = "#ff3891";
 
+		public static List<Bitmap> adds;
 
 		public static String[] ListaColores = {azul,lila,verde,amarillo,naranja,rosa};
 
 		public static int TYPE_TEXT = 1;
 		public static int TYPE_IMAGE = 2;
+
+
 
 		public static int getHeight(int value){
 
@@ -43,6 +51,15 @@ namespace MLearning.Droid
 
 		public static void setHeigthPixel(int value){
 			HEIGHT_PIXEL=value;
+		}
+
+		public static Intent getOpenFacebookIntent(Context context, string fb_url, string web_url) {
+
+			try {
+				return new Intent(Intent.ActionView,Android.Net.Uri.Parse(fb_url) );
+			} catch (Exception e) {
+				return new Intent(Intent.ActionView, Android.Net.Uri.Parse(web_url));
+			}
 		}
 
 

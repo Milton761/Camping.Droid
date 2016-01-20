@@ -65,9 +65,7 @@ namespace MLearning.Droid
 			Configuration.setWidthPixel (widthInDp);
 			Configuration.setHeigthPixel (heightInDp);
 
-			adsImagesPath.Add ("images/ad1.jpg");
-			adsImagesPath.Add ("images/ad2.jpg");
-			adsImagesPath.Add ("images/ad3.jpg");
+			adsImagesPath = AddResources.Instance.addList;
 
 			initUi ();
 			this.AddView (_mainLayout);
@@ -84,18 +82,14 @@ namespace MLearning.Droid
 			_mainLayout.AddView (_adLayout);
 
 			_adLayout.Click += delegate {
-				String url = "https://www.facebook.com/HiTecPe/";
-				Intent i = new Intent (Intent.ActionView);
-				i.SetData (Android.Net.Uri.Parse (url));
-				context.StartActivity(i);
+				context.StartActivity(Configuration.getOpenFacebookIntent(context,"fb://page/114091405281757","http://www.hi-tec.com/pe/"));
 			};
 		}
 
 		void hideAd()
 		{
 			adOpen = false;
-			int numAd = _mainLayout.ChildCount;
-			_mainLayout.RemoveViewAt (numAd-1);
+			_mainLayout.RemoveView (_adLayout);
 		}
 
 		public Bitmap getBitmapFromAsset( String filePath) {
@@ -126,12 +120,10 @@ namespace MLearning.Droid
 			_mainLayout.AddView (_publicidadLayout);
 			_publicidadLayout.Click += delegate {
 				if (adOpen) {
-					
-
 					hideAd ();
 				} else {
 					Random rnd = new Random();
-					showAd (rnd.Next(3));
+					showAd (rnd.Next(adsImagesPath.Count));
 				}
 			};
 
@@ -181,9 +173,6 @@ namespace MLearning.Droid
 
 			int heightItem = Configuration.getHeight (310);
 
-			//Bitmap likeBitmap = Bitmap.CreateScaledBitmap (getBitmapFromAsset ("icons/like.png"), Configuration.getWidth (30), Configuration.getWidth (30), true);
-
-
 			for (int i = 0; i < title.Count; i++) 
 			{
 				LinearLayout item = new LinearLayout (context);
@@ -222,11 +211,6 @@ namespace MLearning.Droid
 				txtnumLike.Gravity = GravityFlags.CenterHorizontal;
 				txtnumLike.SetTextColor (Color.ParseColor ("#ffffff"));
 
-
-				//linearLike.AddView (iconlike);
-				//linearLike.AddView (txtnumLike);
-
-
 				LinearLayout linearType = new LinearLayout (context);
 				linearType.LayoutParameters = new LinearLayout.LayoutParams (-1, -2);
 				linearType.Orientation = Orientation.Vertical;
@@ -254,12 +238,6 @@ namespace MLearning.Droid
 
 				linearType.AddView (txtnumType);
 				linearType.AddView (txtType);
-
-
-
-
-
-
 
 				LinearLayout linearExtraInfo = new LinearLayout (context);
 				linearExtraInfo.LayoutParameters = new LinearLayout.LayoutParams (Configuration.getWidth(100), -2);

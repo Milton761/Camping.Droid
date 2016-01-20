@@ -148,8 +148,11 @@ namespace MLearning.Droid.Views
 
 		protected override void OnCreate(Bundle bundle)
 		{
+			
 			this.Window.AddFlags(WindowManagerFlags.Fullscreen);
 			base.OnCreate(bundle);
+
+
 			SetContentView(Resource.Layout.MainView);
 			player = new Android.Media.MediaPlayer();
 			_currentCurso = 0;

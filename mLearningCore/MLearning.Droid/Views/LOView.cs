@@ -92,9 +92,7 @@ namespace MLearning.Droid.Views
 			_dialogDownload.SetMessage ("Cargando");
 			_dialogDownload.Show ();
 
-			adsImagesPath.Add ("images/ad1.jpg");
-			adsImagesPath.Add ("images/ad2.jpg");
-			adsImagesPath.Add ("images/ad3.jpg");
+			adsImagesPath = AddResources.Instance.addList;
 
 			await ini();
 			//LoadPagesDataSource ();
@@ -115,20 +113,15 @@ namespace MLearning.Droid.Views
 			_mainLayout.AddView (_adLayout);
 
 			_adLayout.Click += delegate {
-				String url = "https://www.facebook.com/HiTecPe/";
-				Intent i = new Intent (Intent.ActionView);
-				i.SetData (Android.Net.Uri.Parse (url));
-				this.StartActivity(i);
+				this.StartActivity(Configuration.getOpenFacebookIntent(this,"fb://page/114091405281757","http://www.hi-tec.com/pe/"));
 			};
 		}
 
 		void hideAd()
 		{
 			adOpen = false;
-			int numAd = _mainLayout.ChildCount;
 			_mainLayout.RemoveView (_adLayout);
 		}
-
 
 
 		async Task  ini(){
@@ -613,12 +606,10 @@ namespace MLearning.Droid.Views
 			_mainLayout.AddView (_publicidadLayout);
 			_publicidadLayout.Click += delegate {
 				if (adOpen) {
-
-
 					hideAd ();
 				} else {
 					Random rnd = new Random();
-					showAd (rnd.Next(3));
+					showAd (rnd.Next(adsImagesPath.Count));
 				}
 			};
 
