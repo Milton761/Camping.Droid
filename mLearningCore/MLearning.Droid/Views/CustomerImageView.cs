@@ -17,6 +17,7 @@ using Square.Picasso;
 using Android.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
+using Android.Text.Util;
 
 namespace MLearning.Droid
 {
@@ -115,6 +116,7 @@ namespace MLearning.Droid
 					background.RemoveView (txtTitle);
 				}
 				txtTitle.Text = _title;
+				Linkify.AddLinks (txtTitle, MatchOptions.All);//HUILLCA
 			}
 
 		}
@@ -129,6 +131,7 @@ namespace MLearning.Droid
 				}
 
 				txtDescription.TextFormatted = Html.FromHtml (_description);
+				Linkify.AddLinks (txtDescription, MatchOptions.All);//HUILLCA
 				//txtDescription.Text = _description;
 			}
 

@@ -17,6 +17,7 @@ using Android.Widget;
 using Android.Graphics;
 using Android.Text;
 using Android.Widget;
+using Android.Text.Util;
 
 namespace MLearning.Droid
 {
@@ -159,6 +160,7 @@ namespace MLearning.Droid
 			get{return _title; }
 			set{_title = value;
 				titleHeader.TextFormatted = Html.FromHtml(_title);
+				Linkify.AddLinks (titleHeader, MatchOptions.All);//HUILLCA
 			}
 
 		}
@@ -170,6 +172,7 @@ namespace MLearning.Droid
 			get{return _content; }
 			set{_content = value;
 				content.TextFormatted = Html.FromHtml (_content);
+				Linkify.AddLinks (content, MatchOptions.All);//HUILLCA
 	                
 				    
 				ViewTreeObserver vto = contenLayout.ViewTreeObserver;

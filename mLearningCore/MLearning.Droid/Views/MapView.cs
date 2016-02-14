@@ -20,6 +20,7 @@ using Koush;
 using Android.Views.Animations;
 using Core.DownloadCache;
 using Core.Session;
+using Android.Text.Util;
 
 namespace MLearning.Droid
 {
@@ -440,6 +441,7 @@ namespace MLearning.Droid
 					detalle.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(32));
 					detalle.Typeface =  Typeface.CreateFromAsset(context.Assets, "fonts/ArcherMediumPro.otf");
 					detalle.Text = extraInfo [i].detalle;
+					Linkify.AddLinks (detalle, MatchOptions.All);//HUILLCA
 					placesInfoLayout.AddView (detalle);
 					flagSpace = true;
 

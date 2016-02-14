@@ -14,6 +14,7 @@ using Android.Widget;
 using Android.Graphics;
 using Android.Text;
 using Square.Picasso;
+using Android.Text.Util;
 
 namespace MLearning.Droid
 {
@@ -232,7 +233,9 @@ namespace MLearning.Droid
 				if (_title == null) {
 					contentLinearLayout.RemoveView (titleHeader);
 				}
-				titleHeader.Text = _title;}
+				titleHeader.Text = _title;
+				Linkify.AddLinks (titleHeader, MatchOptions.All);//HUILLCA
+			}
 
 		}
 
@@ -240,7 +243,9 @@ namespace MLearning.Droid
 		public string Author{
 			get{return _author; }
 			set{_author = value;
-				AutorHeader.Text = _author;}
+				AutorHeader.Text = _author;
+				Linkify.AddLinks (AutorHeader, MatchOptions.All);//HUILLCA
+			}
 
 		}
 
@@ -253,6 +258,7 @@ namespace MLearning.Droid
 					contentLinearLayout.RemoveView (content);
 				}
 				content.TextFormatted = Html.FromHtml (_content);
+				Linkify.AddLinks (content, MatchOptions.All);//HUILLCA
 
 				ViewTreeObserver vto = content.ViewTreeObserver;
 				int H = 0;

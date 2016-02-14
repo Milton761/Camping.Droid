@@ -13,6 +13,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Graphics;
 using Android.Graphics.Drawables;
+using Android.Text.Util;
 
 namespace MLearning.Droid
 {
@@ -103,6 +104,7 @@ namespace MLearning.Droid
 			get{ return _title;}
 			set{ _title = value;
 				txtTitle.Text = _title;
+				Linkify.AddLinks (txtTitle, MatchOptions.All);//HUILLCA
 			}
 
 		}
