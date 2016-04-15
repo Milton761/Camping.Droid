@@ -285,7 +285,7 @@ namespace MLearning.Droid
 		private string _imageUrl;
 		public string ImageUrl{
 			get{return _imageUrl; }
-			set{_imageUrl = value;
+			set{_imageUrl = value/*"/drawable/mapIcon.jpg"*/;
 				/*
 				Bitmap bm = Configuration.GetImageBitmapFromUrl (_imageUrl);
 				imHeader.SetImageBitmap (Bitmap.CreateScaledBitmap (bm,Configuration.getWidth (60), Configuration.getHeight (60),true));

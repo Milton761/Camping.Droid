@@ -158,7 +158,7 @@ namespace MLearning.Droid
 
 			title.Add ("Los 50 mejores campamentos");
 			title.Add ("La palabra del experto");
-			title.Add ("Preparando la salida");
+			title.Add ("Preparando la partida");
 			title.Add ("Más información");
 
 			type.Add ("rutas");

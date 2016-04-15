@@ -990,7 +990,7 @@ namespace MLearning.Droid.Views
 			TaskItem salir = new TaskItem ();
 
 			guiaServicios.Name = "La palabra del experto";
-			guiaSilvestre.Name = "Preparando la salida";
+			guiaSilvestre.Name = "Preparando la partida";
 			caminoCifras.Name = "Más información";
 			salir.Name = "Salir";
 
@@ -1069,7 +1069,7 @@ namespace MLearning.Droid.Views
 				lo._txtCursoN.Text = "La palabra del experto";
 				break;
 			case 2:
-				lo._txtCursoN.Text = "Preparando la salida";
+				lo._txtCursoN.Text = "Preparando la partida";
 				break;
 			case 3:
 				lo._txtCursoN.Text = "Más información";

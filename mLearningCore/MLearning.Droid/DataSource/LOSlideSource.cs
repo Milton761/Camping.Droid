@@ -195,7 +195,7 @@ namespace DataSource
 				plantilla.Title = _title;
 				plantilla.Author = _author;
 
-				plantilla.ImageUrl = _imageurl;
+				plantilla.ImageUrl = _imageurl;//<----------HUILLCA
 				plantilla.Contenido = _paragraph;
 				plantilla.ColorTexto = _colorS;
 				//Console.WriteLine ("CREA PLANTILLAAAAAAAAA  111111");
@@ -205,9 +205,13 @@ namespace DataSource
 			if (_type == 2) {
 				Template2 plantilla = new Template2 (context);
 
+				if (_title == null)
+					_title = " ";
 				List<string> elements = parseContent (_title);
+				//Console.WriteLine (String.Format("Holaaaa {0}",elements.Count));
 
-				if (elements.Count != 0 && elements [0] == "@") {
+
+				if (elements.Count != 0 && elements [0] == "@") {//Console.WriteLine (elements.ToString());
 					plantilla.ColorBackgroundTemplate = elements [1];
 					plantilla.ColorTitle = elements [2];
 					plantilla.ColorDescription = elements [2];

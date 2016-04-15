@@ -10,7 +10,7 @@ using System;
 namespace MLearning.Droid
 {
     [Activity(
-		Label = "Camping Perú"
+		Label = "Perú Camping"
 		, MainLauncher = true
 		, Icon = "@drawable/icon"
 		, Theme = "@style/Theme.Splash"
