@@ -46,7 +46,7 @@ namespace Core.Repositories
 		{
 
 			UseLocalDBWhenOffline = true;
-			MobileService = new MobileServiceClient("https://eduticservice2016-2.azure-mobile.net/", "injgVToIqbRkpZJTNMEGxvlfGujHMQ62");
+			MobileService = new MobileServiceClient("https://eduticservice2016-3.azure-mobile.net/", "dYypEXvwIrEqHAIojawdlOSORpbKZx54");
 			//MobileService = new MobileServiceClient("https://eduticservice2016.azure-mobile.net/", "EHmeLHXJUiWhHBHYYAoOtsYJLwSZWh33");
 			//MobileService = new MobileServiceClient("https://mlearningservice.azure-mobile.net/", "xIAzBqsUDUutvnCTruCwpCozkkyNkj33");
 			//	MobileService = new MobileServiceClient("https://eduticservice.azure-mobile.net/", "dbKHHcwqYgLERWaOCVSHfccSQIWSKv93");
@@ -70,7 +70,7 @@ namespace Core.Repositories
 		{
 
 			//    CurrentPlatform.Init();
-			MobileService = new MobileServiceClient("https://eduticservice2016-2.azure-mobile.net/", "injgVToIqbRkpZJTNMEGxvlfGujHMQ62");
+					MobileService = new MobileServiceClient("https://eduticservice2016-3.azure-mobile.net/", "dYypEXvwIrEqHAIojawdlOSORpbKZx54");
 			//MobileService = new MobileServiceClient("https://eduticservice2016.azure-mobile.net/", "EHmeLHXJUiWhHBHYYAoOtsYJLwSZWh33");
 			//MobileService = new MobileServiceClient("https://mlearningservice.azure-mobile.net/", "xIAzBqsUDUutvnCTruCwpCozkkyNkj33");
 			//MobileService = new MobileServiceClient("https://eduticservice.azure-mobile.net/", "dbKHHcwqYgLERWaOCVSHfccSQIWSKv93");
