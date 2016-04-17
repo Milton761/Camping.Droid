@@ -26,13 +26,12 @@ namespace MLearning.Droid
 		RelativeLayout mainLayout;
 		LinearLayout contenLayout;
 
+		ImageView imgMapa;//----
 		TextView titleHeader;
 		TextView content;
 
 		int widthInDp;
 		int heightInDp;
-
-	
 
 		Context context;
 
@@ -47,6 +46,7 @@ namespace MLearning.Droid
 
 		void Initialize ()
 		{
+			//IsMap = false;
 			var metrics = Resources.DisplayMetrics;
 			widthInDp = ((int)metrics.WidthPixels);
 			heightInDp = ((int)metrics.HeightPixels);
@@ -119,8 +119,8 @@ namespace MLearning.Droid
 		}
 		public void ini(){
 
-			var textFormat = Android.Util.ComplexUnitType.Px;
-			var textFormatdip = Android.Util.ComplexUnitType.Dip;
+			//var textFormat = Android.Util.ComplexUnitType.Px;
+			//var textFormatdip = Android.Util.ComplexUnitType.Dip;
 
 
 
@@ -131,6 +131,7 @@ namespace MLearning.Droid
 			contenLayout.LayoutParameters = new LinearLayout.LayoutParams (-2, -2);
 			contenLayout.Orientation = Orientation.Vertical;
 
+			imgMapa = new ImageView (context);
 			titleHeader = new TextView (context);
 			content = new TextView (context);
 
@@ -140,12 +141,19 @@ namespace MLearning.Droid
 			titleHeader.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(38));
 			content.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(32));
 
-			textContent = new LinearLayout (context);
-			textContent.LayoutParameters = new LinearLayout.LayoutParams (-2, -2);
+			//textContent = new LinearLayout (context);
+			//textContent.LayoutParameters = new LinearLayout.LayoutParams (-2, -2);
+
+
+			imgMapa.SetX(Configuration.getWidth (350));
+			imgMapa.SetY (Configuration.getHeight (20));
+			mainLayout.AddView(imgMapa);
+
 
 			contenLayout.AddView (titleHeader);
 			contenLayout.AddView(content);
 
+			Console.WriteLine ("entro template2");
 			int padW = Configuration.getWidth(30);
 			int padH = Configuration.getHeight (5);
 
@@ -164,7 +172,9 @@ namespace MLearning.Droid
 			}
 
 		}
-
+		/*---------------------------------------------------------------*/
+	
+		/*---------------------------------------------------------------*/
 
 
 		private string _content;
@@ -190,6 +200,19 @@ namespace MLearning.Droid
 
 
 		}
+
+		/*     ----------------- MAPAS -----------------------------------*/
+
+		private Bitmap _imageBitmap;
+		public Bitmap Image{
+			get{return _imageBitmap; }
+			set{_imageBitmap = value;
+				imgMapa.SetImageBitmap (Bitmap.CreateScaledBitmap (_imageBitmap,Configuration.getWidth (200), Configuration.getHeight (300),true));
+
+			}
+		}
+
+		/* --------------- Fin Mapas -------------------------------------*/
 	}
 }
 

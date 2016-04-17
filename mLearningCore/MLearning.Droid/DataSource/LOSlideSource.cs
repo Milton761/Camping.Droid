@@ -7,6 +7,8 @@ using Android.Views;
 using Android.Content;
 using Android.Widget;
 using System.Collections.Generic;
+using System.Text;
+using System.Globalization;
 
 namespace DataSource
 {
@@ -15,6 +17,7 @@ namespace DataSource
 		public event PropertyChangedEventHandler PropertyChanged;
 
 		Context context;
+		public String title_page;
 
 		public LOSlideSource(Context context){
 			this.context = context;
@@ -68,7 +71,9 @@ namespace DataSource
 					PropertyChanged(this, new PropertyChangedEventArgs("Title"));
 			}
 		}
+		// ---------------------------------------------------------------------------------------------------------------------------------
 
+		// ---------------------------------------------------------------------------------------------------------------------------------
 		private string _author;
 
 		public string Author
@@ -219,8 +224,17 @@ namespace DataSource
 					plantilla.ColorTexto = _colorS;
 				}
 
+
 				plantilla.Title = _title;
 				plantilla.Contenido = _paragraph;
+
+				/*Datos básicos*/
+				if(_title.Equals("Datos básicos")){
+					
+					string pathImg = "mapas/" + replaceForImages (title_page) + ".png";
+					plantilla.Image = getBitmapFromAsset(pathImg);
+					Console.WriteLine (pathImg);
+				}
 
 				return plantilla;
 
@@ -267,6 +281,33 @@ namespace DataSource
 				return plantilla;
 			}
 			return null;
+		}
+
+		public Bitmap getBitmapFromAsset( String filePath) {
+			System.IO.Stream s = context.Assets.Open (filePath);
+			Bitmap bitmap = BitmapFactory.DecodeStream (s);
+
+			return bitmap;
+		}
+
+
+		public string replaceForImages(string urlpathImage){
+			urlpathImage = urlpathImage.Replace (' ', '_'); 
+			urlpathImage = urlpathImage.Replace ('-', '_'); 
+
+			var normalizedString = urlpathImage.Normalize(NormalizationForm.FormD);
+			var stringBuilder = new StringBuilder();
+
+			foreach (var c in normalizedString)
+			{
+				var unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(c);
+				if (unicodeCategory != UnicodeCategory.NonSpacingMark)
+				{
+					stringBuilder.Append(c);
+				}
+			}
+
+			return stringBuilder.ToString().Normalize(NormalizationForm.FormC);
 		}
 
 	}

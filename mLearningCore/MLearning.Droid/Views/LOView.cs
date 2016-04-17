@@ -545,7 +545,7 @@ namespace MLearning.Droid.Views
 									slidesource.Author = slides [m].loauthor;
 								if (slides [m].lovideo != null)
 									slidesource.VideoUrl = slides [m].lovideo;
-
+					
 								var c_slide = slides [m];
 
 
@@ -562,13 +562,14 @@ namespace MLearning.Droid.Views
 
 
 										var c_item_ize = items [n];
-
+										
 										slidesource.Itemize.Add (item);
 									}
 								}
 
 
-
+								
+								slidesource.title_page = front.Title;
 								linearScroll.AddView (slidesource.getViewSlide ());
 
 

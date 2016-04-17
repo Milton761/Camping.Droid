@@ -1,27 +1,27 @@
-﻿<Properties StartupItem="MLearning.Droid/GuiaCamping.csproj">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MLearning.Droid/Views/Template1.cs">
+﻿<Properties StartupItem="MLearning.Droid\GuiaCamping.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MLearning.Core\Repositories\WAMSRepositoryService.cs">
     <Files>
-      <File FileName="MLearning.Droid/Views/Template1.cs" Line="174" Column="60" />
-      <File FileName="MLearning.Droid/Views/Template2.cs" Line="1" Column="1" />
-      <File FileName="MLearning.Droid/Views/Template3.cs" Line="1" Column="1" />
-      <File FileName="MLearning.Droid/Views/Template4.cs" Line="1" Column="1" />
-      <File FileName="MLearning.Droid/Views/WallView.cs" Line="1" Column="1" />
-      <File FileName="MLearning.Droid/Views/MainView.cs" Line="1" Column="1" />
-      <File FileName="MLearning.Droid/Views/frontView.cs" Line="1" Column="1" />
-      <File FileName="MLearning.Droid/Properties/AndroidManifest.xml" Line="1" Column="1" />
-      <File FileName="MLearning.Droid/SplashScreen.cs" Line="1" Column="1" />
-      <File FileName="MLearning.Core/Repositories/WAMSRepositoryService.cs" Line="1" Column="1" />
-      <File FileName="MLearning.Core/ViewModels/LOMapViewModel.cs" Line="1" Column="1" />
-      <File FileName="MLearning.Core/ViewModels/LOViewModel.cs" Line="1" Column="1" />
-      <File FileName="MLearning.Droid/Views/JustifiedTextView.cs" Line="1" Column="1" />
-      <File FileName="MLearning.Droid/DataSource/LOSlideSource.cs" Line="191" Column="25" />
-      <File FileName="MLearning.Droid/Views/LOMapView.cs" Line="1" Column="1" />
-      <File FileName="MLearning.Droid/Views/LOView.cs" Line="541" Column="39" />
-      <File FileName="MLearning.Droid/Views/UnidadItem.cs" Line="1" Column="1" />
-      <File FileName="MLearning.Droid/DataSource/LOItemSource.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid\Views\Template1.cs" Line="247" Column="30" />
+      <File FileName="MLearning.Droid\Views\Template2.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid\Views\Template3.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid\Views\Template4.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid\Views\WallView.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid\Views\MainView.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid\Views\frontView.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid\Properties\AndroidManifest.xml" Line="1" Column="1" />
+      <File FileName="MLearning.Droid\SplashScreen.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Core\Repositories\WAMSRepositoryService.cs" Line="55" Column="4" />
+      <File FileName="MLearning.Core\ViewModels\LOMapViewModel.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Core\ViewModels\LOViewModel.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid\Views\JustifiedTextView.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid\DataSource\LOSlideSource.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid\Views\LOMapView.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid\Views\LOView.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid\Views\UnidadItem.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid\DataSource\LOItemSource.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.NexusS_Android4pulg" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.3004d5aa35e32200" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/aocsa/Documents/proyectos/milton/Hitec.Droid dec 4/mLearningCore/MLearning.Droid/Views/MainView.cs" line="764" column="1" />
