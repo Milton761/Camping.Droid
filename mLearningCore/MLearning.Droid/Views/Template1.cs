@@ -266,7 +266,7 @@ namespace MLearning.Droid
 				{     
 					H = content.Height;
 					Console.WriteLine ("TAM:::1:" + H );
-					content.LayoutParameters.Height = H-Configuration.getHeight(50);
+					content.LayoutParameters.Height = H-Configuration.getHeight(20); //------ESPACIOS EN BLANCO
 
 				};  
 			}

@@ -201,7 +201,7 @@ namespace DataSource
 				plantilla.Author = _author;
 
 				plantilla.ImageUrl = _imageurl;//<----------HUILLCA
-				plantilla.Contenido = _paragraph;
+				plantilla.Contenido = eraseLastBR(_paragraph);;
 				plantilla.ColorTexto = _colorS;
 				//Console.WriteLine ("CREA PLANTILLAAAAAAAAA  111111");
 				return plantilla;
@@ -226,7 +226,7 @@ namespace DataSource
 
 
 				plantilla.Title = _title;
-				plantilla.Contenido = _paragraph;
+				plantilla.Contenido = eraseLastBR(_paragraph);;
 
 				/*Datos básicos*/
 				if(_title.Equals("Datos básicos")){
@@ -308,6 +308,27 @@ namespace DataSource
 			}
 
 			return stringBuilder.ToString().Normalize(NormalizationForm.FormC);
+		}
+
+		public string eraseLastBR(string content){
+			int n = content.Length;
+			if(n>=8){
+				string test="";
+				for(int i=n-8;i<n-4;i++){
+					test+= content[i];
+				}Console.WriteLine (test);
+
+				if (test.Equals ("<br>")) {
+					content = content.Remove (n - 8,test.Length);
+					Console.WriteLine ("SE ELIMINO BR ");
+				} else {
+					Console.WriteLine ("NO HAY BR");
+				}
+			}else{
+				Console.WriteLine ("MUY POCO CONTENIDO");
+			}
+
+			return content;
 		}
 
 	}

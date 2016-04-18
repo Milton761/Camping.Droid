@@ -191,7 +191,7 @@ namespace MLearning.Droid
 				{     
 					H = contenLayout.Height;
 					Console.WriteLine ("TAM::::" + H );
-					contenLayout.LayoutParameters.Height = H-Configuration.getHeight(40);
+					contenLayout.LayoutParameters.Height = H-Configuration.getHeight(20);
 
 				};  
 				//contenLayout.LayoutParameters = new LinearLayout.LayoutParams (-2, H);
