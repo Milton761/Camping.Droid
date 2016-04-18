@@ -314,16 +314,18 @@ namespace DataSource
 			int n = content.Length;
 			if(n>=8){
 				string test="";
-				for(int i=n-8;i<n-4;i++){
+				for(int i=n-8;i<n;i++){
 					test+= content[i];
 				}Console.WriteLine (test);
 
-				if (test.Equals ("<br>")) {
+				if (test.Equals ("<br></p>")) {
 					content = content.Remove (n - 8,test.Length);
-					Console.WriteLine ("SE ELIMINO BR ");
+					Console.WriteLine ("SE ELIMINO BR P");
 				} else {
-					Console.WriteLine ("NO HAY BR");
+					Console.WriteLine ("NO HAY BR P");
 				}
+				string  p = "<p>";
+				content = content.Remove (0,p.Length);
 			}else{
 				Console.WriteLine ("MUY POCO CONTENIDO");
 			}

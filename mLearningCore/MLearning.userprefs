@@ -1,8 +1,8 @@
 ﻿<Properties StartupItem="MLearning.Droid\GuiaCamping.csproj">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MLearning.Core\Repositories\WAMSRepositoryService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MLearning.Droid\Views\Template1.cs">
     <Files>
-      <File FileName="MLearning.Droid\Views\Template1.cs" Line="247" Column="30" />
-      <File FileName="MLearning.Droid\Views\Template2.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid\Views\Template1.cs" Line="269" Column="68" />
+      <File FileName="MLearning.Droid\Views\Template2.cs" Line="194" Column="73" />
       <File FileName="MLearning.Droid\Views\Template3.cs" Line="1" Column="1" />
       <File FileName="MLearning.Droid\Views\Template4.cs" Line="1" Column="1" />
       <File FileName="MLearning.Droid\Views\WallView.cs" Line="1" Column="1" />
@@ -14,7 +14,7 @@
       <File FileName="MLearning.Core\ViewModels\LOMapViewModel.cs" Line="1" Column="1" />
       <File FileName="MLearning.Core\ViewModels\LOViewModel.cs" Line="1" Column="1" />
       <File FileName="MLearning.Droid\Views\JustifiedTextView.cs" Line="1" Column="1" />
-      <File FileName="MLearning.Droid\DataSource\LOSlideSource.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid\DataSource\LOSlideSource.cs" Line="304" Column="59" />
       <File FileName="MLearning.Droid\Views\LOMapView.cs" Line="1" Column="1" />
       <File FileName="MLearning.Droid\Views\LOView.cs" Line="1" Column="1" />
       <File FileName="MLearning.Droid\Views\UnidadItem.cs" Line="1" Column="1" />
