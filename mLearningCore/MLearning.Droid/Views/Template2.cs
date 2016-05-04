@@ -182,8 +182,11 @@ namespace MLearning.Droid
 			get{return _content; }
 			set{_content = value;
 				content.TextFormatted = Html.FromHtml (_content);
-				Linkify.AddLinks (content, MatchOptions.All);//HUILLCA
-	                
+				//Linkify.AddLinks(content,Java.Util.Regex.Pattern.Compile("\\W\\d+\\W\\s\\d+\\W\\d+"),"tel:");
+				//Linkify.AddLinks(content,Java.Util.Regex.Pattern.Compile("\\d+\\W\\d+"),"tel:");
+				Linkify.AddLinks(content,Patterns.EmailAddress,"email:");
+				Linkify.AddLinks(content,Patterns.WebUrl,"http://");//HUILLCA
+
 				    
 				ViewTreeObserver vto = contenLayout.ViewTreeObserver;
 				int H = 0;

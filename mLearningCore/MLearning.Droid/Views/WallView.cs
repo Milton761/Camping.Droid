@@ -239,14 +239,21 @@ namespace MLearning.Droid
 			_fondo2.RemoveAllViews();
 
 			infoCursoUnidad.RemoveAllViews ();
+			_txtCursoN.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(55));
+			_txtUnidadN.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(50));
+			//Eliminando los subtitulos innecesarios
+			if (!_txtCursoN.Text.ToString().Equals("Los 50 mejores campamentos")) {
+				_txtUnidadN.Text = _txtCursoN.Text;
+				_txtCursoN.Text = "   ";
+				_txtUnidadN.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(55));
+			}
 			infoCursoUnidad.AddView (_txtCursoN);
 			infoCursoUnidad.AddView (_txtUnidadN);
 
 			_fondo2.AddView(test);
 			//_txtCursoN.Text = "PROBANDO";
 			//_txtUnidadN.Text = "PROBANDO";
-			_txtCursoN.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(55));
-			_txtUnidadN.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(50));
+
 
 			_txtCursoN.SetTextColor (Color.ParseColor("#ffffff"));
 			_txtCursoN.Typeface =  Typeface.CreateFromAsset(context.Assets, "fonts/ArcherMediumPro.otf");

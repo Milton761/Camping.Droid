@@ -991,7 +991,7 @@ namespace MLearning.Droid.Views
 
 			guiaServicios.Name = "La palabra del experto";
 			guiaSilvestre.Name = "Preparando la partida";
-			caminoCifras.Name = "Más información";
+			caminoCifras.Name = "¿Cómo usar la guía?";
 			salir.Name = "Salir";
 
 			guiaServicios.Asset = "icons/iconservicios.png";
@@ -1072,7 +1072,7 @@ namespace MLearning.Droid.Views
 				lo._txtCursoN.Text = "Preparando la partida";
 				break;
 			case 3:
-				lo._txtCursoN.Text = "Más información";
+				lo._txtCursoN.Text = "¿Cómo usar la guía?";
 				break;
 
 			default:

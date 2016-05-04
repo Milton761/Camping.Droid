@@ -1168,6 +1168,26 @@ namespace MLearning.Core.ViewModels
         async void LoadCircles()
         {
             var list = await _mLearningService.GetCirclesByUser(UserID);
+			/***
+			 * CAMBIANDO EL ORDEN DE LAS SECCIONES
+			 * **/
+			/*if (list.Count != 0) {
+				int k = 0;
+				var section0 = list [0];
+				var section1 = list [1];
+				var section2 = list [2];
+				var section3 = list [3];
+				list [0] = section3;
+				list [1] = section2;
+				list [2] = section1;
+				list [3] = section0;
+
+			}
+
+
+		*/
+			/*------------*/
+
 
             CirclesList = new ObservableCollection<circle_by_user>(list);
 
