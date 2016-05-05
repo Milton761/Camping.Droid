@@ -1183,13 +1183,7 @@ namespace MLearning.Core.ViewModels
 				list [3] = section0;
 
 			}
-<<<<<<< Updated upstream
-
-
 			*/
-=======
-		*/
->>>>>>> Stashed changes
 			/*------------*/
 			/*for (int i = list.Count - 1; i >= 0; i--){
 				

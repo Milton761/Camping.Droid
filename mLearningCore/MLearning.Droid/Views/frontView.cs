@@ -151,10 +151,10 @@ namespace MLearning.Droid
 			numLikes.Add ("10");
 			numLikes.Add ("10");
 
-			numTypes.Add ("9");//3
-			numTypes.Add ("4");//7
-			numTypes.Add ("7");//4
-			numTypes.Add ("3");//9
+			numTypes.Add ("3");//3
+			numTypes.Add ("7");//7
+			numTypes.Add ("4");//4
+			numTypes.Add ("9");//9
 
 			title.Add ("¿Cómo usar la guía?");
 			title.Add ("Preparando la partida");

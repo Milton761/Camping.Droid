@@ -943,7 +943,10 @@ namespace MLearning.Droid.Views
 				if (_currentCurso == 3) {
 					mDrawerLayout.CloseDrawer (mLeftDrawer);
 				} else {
+
 					showCifras ();
+					//showGuiaSilvestre ();
+
 				}
 			}
 			else if(e.Position == 3)//otros
@@ -1426,7 +1429,9 @@ namespace MLearning.Droid.Views
 
 				lo._txtCursoN.Text = vm.CirclesList[_currentCurso].name;
 
-				if ((_currentCurso == 0 && _currentUnidad!=3) || (_currentCurso == 1) || (_currentCurso == 2)) {
+
+				// TODO evitar hack
+				if ((_currentCurso == 3) || (_currentCurso == 0) || (_currentCurso == 1) || (_currentCurso == 2)) {
 
 					for (int i = 0; i < lo._listLinearUnidades.Count; i++) {
 						lo._listLinearUnidades [i].Click += lo_item_click;

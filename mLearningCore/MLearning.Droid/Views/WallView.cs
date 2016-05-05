@@ -778,7 +778,7 @@ namespace MLearning.Droid
 					}
 				} */
 
-				if (indexCurso == 3) {
+				if (indexCurso == 0) {//3
 					titleUnidad.SetTextSize (textFormat,Configuration.getHeight(55));
 				}
 
@@ -833,7 +833,7 @@ namespace MLearning.Droid
 
 				linearUnidad.AddView (linearContenido);
 
-				if (indexCurso == 0) {
+				if (indexCurso == 3) {
 					if (indexUnidad != 3) {
 
 						ImageView info = new ImageView (context);
