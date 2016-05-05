@@ -1419,6 +1419,7 @@ namespace MLearning.Droid.Views
 					});
 				}
 				 
+				  
 				lo.initUnidades (_currentCurso,_currentUnidad);
 
 				lo._txtCursoN.Text = vm.CirclesList[_currentCurso].name;

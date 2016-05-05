@@ -1185,9 +1185,13 @@ namespace MLearning.Core.ViewModels
 			}
 
 
-		*/
+			*/
 			/*------------*/
-
+			/*for (int i = list.Count - 1; i >= 0; i--){
+				
+				
+			}*/
+			list.Reverse();
 
             CirclesList = new ObservableCollection<circle_by_user>(list);
 
