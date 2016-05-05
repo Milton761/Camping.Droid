@@ -1,15 +1,18 @@
 ﻿<Properties StartupItem="MLearning.Droid/GuiaCamping.csproj">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MLearning.Droid/Views/Template2.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MLearning.Core/ViewModels/MainViewModel.cs">
     <Files>
-      <File FileName="MLearning.Droid/Views/WallView.cs" Line="244" Column="44" />
-      <File FileName="MLearning.Droid/Views/MainView.cs" Line="1066" Column="27" />
-      <File FileName="MLearning.Droid/Views/Template1.cs" Line="237" Column="12" />
-      <File FileName="MLearning.Droid/Views/Template2.cs" Line="186" Column="18" />
+      <File FileName="MLearning.Droid/Views/WallView.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid/Views/MainView.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid/Views/Template1.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid/Views/Template2.cs" Line="1" Column="1" />
       <File FileName="MLearning.Droid/Views/Template3.cs" Line="1" Column="1" />
       <File FileName="MLearning.Droid/Views/Template4.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid/Views/frontView.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid/MvxActionBarEventSourceActivity.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Core/ViewModels/MainViewModel.cs" Line="1175" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.3004d5aa35e32200" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Xamarin_Android_API_23" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/aocsa/Documents/proyectos/milton/Hitec.Droid dec 4/mLearningCore/MLearning.Droid/Views/MainView.cs" line="764" column="1" />

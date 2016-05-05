@@ -151,25 +151,25 @@ namespace MLearning.Droid
 			numLikes.Add ("10");
 			numLikes.Add ("10");
 
-			numTypes.Add ("3");
-			numTypes.Add ("7");
-			numTypes.Add ("4");
-			numTypes.Add ("9");
+			numTypes.Add ("9");//3
+			numTypes.Add ("4");//7
+			numTypes.Add ("7");//4
+			numTypes.Add ("3");//9
 
-			title.Add ("Los 50 mejores campamentos");
-			title.Add ("La palabra del experto");
-			title.Add ("Preparando la partida");
 			title.Add ("¿Cómo usar la guía?");
+			title.Add ("Preparando la partida");
+			title.Add ("La palabra del experto");
+			title.Add ("Los 50 mejores campamentos");
 
-			type.Add ("rutas");
-			type.Add ("guias");
-			type.Add ("guias");
 			type.Add ("cifras");
+			type.Add ("guias");
+			type.Add ("guias");
+			type.Add ("rutas");
 
-			coverImagePath.Add ("images/fondorutas.png");
-			coverImagePath.Add ("images/fondoguias.png");
-			coverImagePath.Add ("images/fondovidasilvestre.png");
 			coverImagePath.Add ("images/fondocaminoinca.png");
+			coverImagePath.Add ("images/fondovidasilvestre.png");
+			coverImagePath.Add ("images/fondoguias.png");
+			coverImagePath.Add ("images/fondorutas.png");
 
 			int heightItem = Configuration.getHeight (310);
 

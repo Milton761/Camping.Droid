@@ -96,7 +96,7 @@ namespace MLearning.Droid
 			get{return _title; }
 			set{_title = value;
 				titleHeaderList.Text = _title;
-				Linkify.AddLinks (titleHeaderList, MatchOptions.All);//HUILLCA
+				//Linkify.AddLinks (titleHeaderList, MatchOptions.All);//HUILLCA
 			}
 
 		}

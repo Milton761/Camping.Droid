@@ -168,7 +168,7 @@ namespace MLearning.Droid
 			get{return _title; }
 			set{_title = value;
 				titleHeader.TextFormatted = Html.FromHtml(_title);
-				Linkify.AddLinks (titleHeader, MatchOptions.All);//HUILLCA
+				//Linkify.AddLinks (titleHeader, MatchOptions.All);//HUILLCA
 			}
 
 		}
@@ -184,8 +184,8 @@ namespace MLearning.Droid
 				content.TextFormatted = Html.FromHtml (_content);
 				//Linkify.AddLinks(content,Java.Util.Regex.Pattern.Compile("\\W\\d+\\W\\s\\d+\\W\\d+"),"tel:");
 				//Linkify.AddLinks(content,Java.Util.Regex.Pattern.Compile("\\d+\\W\\d+"),"tel:");
-				Linkify.AddLinks(content,Patterns.EmailAddress,"email:");
-				Linkify.AddLinks(content,Patterns.WebUrl,"http://");//HUILLCA
+				//Linkify.AddLinks(content,Patterns.EmailAddress,"email:");
+				//Linkify.AddLinks(content,Patterns.WebUrl,"http://");//HUILLCA
 
 				    
 				ViewTreeObserver vto = contenLayout.ViewTreeObserver;

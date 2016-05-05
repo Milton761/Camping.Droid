@@ -874,19 +874,20 @@ namespace MLearning.Droid.Views
 		{
 			TaskItem home = new TaskItem ();
 			TaskItem fotos = new TaskItem ();
-			TaskItem rutas = new TaskItem ();
+
+			TaskItem caminoCifras = new TaskItem ();
 
 			home.Name = "Home";
 			fotos.Name = "Fotos";
-			rutas.Name = "Los 50 mejores campamentos";
 
+			caminoCifras.Name = "¿Cómo usar la guía?";
 			home.Asset = "icons/iconhome.png";
 			fotos.Asset = "icons/iconcamara.png";
-			rutas.Asset = "icons/iconrutas.png";
+			caminoCifras.Asset = "icons/iconcifras.png";
 
 			_tasksTop.Add (home);
 			//_tasksTop.Add (fotos);
-			_tasksTop.Add (rutas);
+			_tasksTop.Add (caminoCifras);
 
 			_listTasksTop.Adapter = new TaskAdapter (this, _tasksTop);
 			_listTasksTop.ItemClick += _listTasksItemTop_Click;
@@ -986,22 +987,23 @@ namespace MLearning.Droid.Views
 		{
 			TaskItem guiaServicios = new TaskItem ();
 			TaskItem guiaSilvestre = new TaskItem ();
-			TaskItem caminoCifras = new TaskItem ();
+			TaskItem rutas = new TaskItem ();
 			TaskItem salir = new TaskItem ();
 
 			guiaServicios.Name = "La palabra del experto";
 			guiaSilvestre.Name = "Preparando la partida";
-			caminoCifras.Name = "¿Cómo usar la guía?";
+			rutas.Name = "Los 50 mejores campamentos";
 			salir.Name = "Salir";
 
 			guiaServicios.Asset = "icons/iconservicios.png";
 			guiaSilvestre.Asset = "icons/iconvidasilvestre.png";
-			caminoCifras.Asset = "icons/iconcifras.png";
+			rutas.Asset = "icons/iconrutas.png";
 			salir.Asset = "icons/iconsalir.png";
 
-			_tasksBotton.Add (guiaServicios);
+
 			_tasksBotton.Add (guiaSilvestre);
-			_tasksBotton.Add (caminoCifras);
+			_tasksBotton.Add (guiaServicios);
+			_tasksBotton.Add (rutas);
 			//_tasksBotton.Add (salir);
 
 			_listTasksBotton.Adapter = new TaskAdapter (this, _tasksBotton);
@@ -1063,16 +1065,16 @@ namespace MLearning.Droid.Views
 
 			switch (index) {
 			case 0:
-				lo._txtCursoN.Text = "Los 50 mejores campamentos";
+				lo._txtCursoN.Text = "¿Cómo usar la guía?";
 				break;
 			case 1:
-				lo._txtCursoN.Text = "La palabra del experto";
-				break;
-			case 2:
 				lo._txtCursoN.Text = "Preparando la partida";
 				break;
+			case 2:
+				lo._txtCursoN.Text = "La palabra del experto";
+				break;
 			case 3:
-				lo._txtCursoN.Text = "¿Cómo usar la guía?";
+				lo._txtCursoN.Text = "Los 50 mejores campamentos";
 				break;
 
 			default:
