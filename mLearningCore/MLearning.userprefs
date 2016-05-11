@@ -1,19 +1,23 @@
 ﻿<Properties StartupItem="MLearning.Droid/GuiaCamping.csproj">
   <MonoDevelop.Ide.Workbench ActiveDocument="MLearning.Droid/Views/MainView.cs">
     <Files>
-      <File FileName="MLearning.Droid/Views/WallView.cs" Line="245" Column="44" />
-      <File FileName="MLearning.Droid/Views/MainView.cs" Line="885" Column="41" />
-      <File FileName="MLearning.Droid/Views/Template1.cs" Line="247" Column="7" />
-      <File FileName="MLearning.Droid/Views/Template2.cs" Line="171" Column="7" />
-      <File FileName="MLearning.Droid/Views/Template3.cs" Line="99" Column="7" />
-      <File FileName="MLearning.Droid/Views/Template4.cs" Line="1" Column="1" />
-      <File FileName="MLearning.Droid/Views/frontView.cs" Line="159" Column="22" />
+      <File FileName="MLearning.Droid/Views/WallView.cs" Line="411" Column="65" />
+      <File FileName="MLearning.Droid/Views/MainView.cs" Line="1668" Column="5" />
+      <File FileName="MLearning.Droid/Views/Template1.cs" Line="264" Column="5" />
+      <File FileName="MLearning.Droid/Views/Template2.cs" Line="188" Column="5" />
+      <File FileName="MLearning.Droid/Views/Template3.cs" Line="98" Column="67" />
+      <File FileName="MLearning.Droid/Views/Template4.cs" Line="113" Column="35" />
+      <File FileName="MLearning.Droid/Views/frontView.cs" Line="1" Column="1" />
       <File FileName="MLearning.Droid/MvxActionBarEventSourceActivity.cs" Line="1" Column="1" />
-      <File FileName="MLearning.Core/ViewModels/MainViewModel.cs" Line="1175" Column="15" />
-      <File FileName="MLearning.Droid/Views/CustomerImageView.cs" Line="119" Column="5" />
+      <File FileName="MLearning.Core/ViewModels/MainViewModel.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid/Views/CustomerImageView.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid/DataSource/LOSlideSource.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid/Views/LOView.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid/Views/Configuration.cs" Line="164" Column="4" />
+      <File FileName="MLearning.Droid/MyActionBarDrawerToggle.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.3004d5aa35e32200" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 5 (KitKat)" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/aocsa/Documents/proyectos/milton/Hitec.Droid dec 4/mLearningCore/MLearning.Droid/Views/MainView.cs" line="764" column="1" />

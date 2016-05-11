@@ -233,7 +233,7 @@ namespace MLearning.Droid
 				if (_title == null) {
 					contentLinearLayout.RemoveView (titleHeader);
 				}
-				titleHeader.Text = _title;
+				titleHeader.Text = Configuration.quitarErrorTildes(_title);
 				Linkify.AddLinks (titleHeader, MatchOptions.All);//HUILLCA
 			}
 
@@ -257,11 +257,11 @@ namespace MLearning.Droid
 				if (_content == null) {
 					contentLinearLayout.RemoveView (content);
 				}
-				content.TextFormatted = Html.FromHtml (_content);
+				content.TextFormatted = Html.FromHtml (Configuration.quitarErrorTildes(_content));
 				//Linkify.AddLinks(content,Java.Util.Regex.Pattern.Compile("\\W\\d+\\W\\s\\d+\\W\\d+"),"tel:");
 				//Linkify.AddLinks(content,Java.Util.Regex.Pattern.Compile("\\d+\\W\\d+"),"tel:");
 				//Linkify.AddLinks(content,Patterns.EmailAddress,"email:");
-				//Linkify.AddLinks(content,Patterns.WebUrl,"http://");//HUILLCA
+				Linkify.AddLinks(content,Patterns.WebUrl,"http://");//HUILLCA
 
 
 				ViewTreeObserver vto = content.ViewTreeObserver;

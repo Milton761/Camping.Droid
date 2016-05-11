@@ -408,9 +408,10 @@ namespace MLearning.Droid
 			_fondo2.LayoutParameters = new RelativeLayout.LayoutParams (-1, Configuration.getWidth (640));
 			_fondo2.SetY (Configuration.getHeight (0));
 
-			Drawable dr1 = new BitmapDrawable (getBitmapFromAsset("icons/fondoselec.png"));
-			_fondo2.SetBackgroundDrawable (dr1);
-			dr1 = null;
+			//Drawable dr1 = new BitmapDrawable (getBitmapFromAsset("icons/fondoselec.png"));
+			//_fondo2.SetBackgroundDrawable (dr1);
+			_fondo2.SetBackgroundColor (Color.ParseColor ("#ff9600"));
+			//dr1 = null;
 
 			_mainSpace.AddView (_fondo2);
 
