@@ -146,19 +146,22 @@ namespace MLearning.Droid
 		public static string quitarErrorTildes(string Texto)
 		{
 			//Minusculas
-			Texto =Texto.Replace ("á","á");
-			Texto =Texto.Replace ("é","é");
-			Texto =Texto.Replace ("í","í");
-			Texto =Texto.Replace ("ó","ó");
-			Texto =Texto.Replace ("ú","ú");
-			Texto =Texto.Replace ("ñ","ñ");
-			//Mayusculas
-			Texto =Texto.Replace ("Á","Á");
-			Texto =Texto.Replace ("É","É");
-			Texto =Texto.Replace ("Í","Í");
-			Texto =Texto.Replace ("Ó","Ó");
-			Texto =Texto.Replace ("Ú","Ú");
-			Texto =Texto.Replace ("Ñ","Ñ");
+			if (Texto != null && Texto.Length > 0)
+			{
+				Texto = Texto.Replace("á", "á");
+				Texto = Texto.Replace("é", "é");
+				Texto = Texto.Replace("í", "í");
+				Texto = Texto.Replace("ó", "ó");
+				Texto = Texto.Replace("ú", "ú");
+				Texto = Texto.Replace("ñ", "ñ");
+				//Mayusculas
+				Texto = Texto.Replace("Á", "Á");
+				Texto = Texto.Replace("É", "É");
+				Texto = Texto.Replace("Í", "Í");
+				Texto = Texto.Replace("Ó", "Ó");
+				Texto = Texto.Replace("Ú", "Ú");
+				Texto = Texto.Replace ("Ñ","Ñ");
+			}
 
 			return Texto;
 		}
