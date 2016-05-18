@@ -167,7 +167,8 @@ namespace MLearning.Droid
 		public string Title{
 			get{return _title; }
 			set{_title = value;
-				titleHeader.TextFormatted = Html.FromHtml(Configuration.quitarErrorTildes(_title));
+				_title = Configuration.quitarErrorTildes (_title);
+				titleHeader.TextFormatted = Html.FromHtml(_title);
 				//Linkify.AddLinks (titleHeader, MatchOptions.All);//HUILLCA
 			}
 
@@ -181,7 +182,8 @@ namespace MLearning.Droid
 		public string Contenido{
 			get{return _content; }
 			set{_content = value;
-				content.TextFormatted = Html.FromHtml (Configuration.quitarErrorTildes(_content));
+				_content = Configuration.quitarErrorTildes (_content);
+				content.TextFormatted = Html.FromHtml (_content);
 				//Linkify.AddLinks(content,Java.Util.Regex.Pattern.Compile("\\W\\d+\\W\\s\\d+\\W\\d+"),"tel:");
 				//Linkify.AddLinks(content,Java.Util.Regex.Pattern.Compile("\\d+\\W\\d+"),"tel:");
 				//Linkify.AddLinks(content,Patterns.EmailAddress,"email:");

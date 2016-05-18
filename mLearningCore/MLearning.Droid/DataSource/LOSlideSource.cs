@@ -226,7 +226,7 @@ namespace DataSource
 
 
 				plantilla.Title = _title;
-				plantilla.Contenido = eraseLastBR(_paragraph);;
+				plantilla.Contenido = eraseLastBR(_paragraph);
 
 				/*Datos básicos*/
 				if(_title.Equals("Datos básicos")){

@@ -12,6 +12,8 @@ using MLearning.Droid.Views;
 using MLearning.Core.ViewModels;
 using Android.Text;
 using Android.Text.Util;
+using Com.Telerik.Widget.List;
+using Android.Views;
 
 namespace MLearning.Droid
 {
@@ -213,6 +215,8 @@ namespace MLearning.Droid
 		LinearLayout _images_S2;
 
 
+
+
 		public void imLoClick(object sender, EventArgs eventArgs)
 		{
 
@@ -234,8 +238,10 @@ namespace MLearning.Droid
 			test.DrawingCacheEnabled = true;
 			test.LayoutParameters = new LinearLayout.LayoutParams (-1, -1);
 
+
 			Picasso.With (context).Load (imView.sBackgoundUrl).Resize(Configuration.getWidth(640),Configuration.getWidth(640)).CenterCrop().Into (test);
 			_fondo2.SetVerticalGravity (Android.Views.GravityFlags.Start);
+
 			_fondo2.RemoveAllViews();
 
 			infoCursoUnidad.RemoveAllViews ();
@@ -249,7 +255,6 @@ namespace MLearning.Droid
 			}
 			infoCursoUnidad.AddView (_txtCursoN);
 			infoCursoUnidad.AddView (_txtUnidadN);
-
 			_fondo2.AddView(test);
 			//_txtCursoN.Text = "PROBANDO";
 			//_txtUnidadN.Text = "PROBANDO";
@@ -370,6 +375,7 @@ namespace MLearning.Droid
 			_scrollSpace.LayoutParameters = new VerticalScrollView.LayoutParams (-1, Configuration.getHeight(1015-85));
 			_scrollSpace.SetY (Configuration.getHeight (125));
 			//_scrollSpace.SetBackgroundColor (Color.ParseColor ("#FF0000"));
+
 			_mainLayout.AddView (_scrollSpace);
 
 
@@ -408,9 +414,10 @@ namespace MLearning.Droid
 			_fondo2.LayoutParameters = new RelativeLayout.LayoutParams (-1, Configuration.getWidth (640));
 			_fondo2.SetY (Configuration.getHeight (0));
 
-			//Drawable dr1 = new BitmapDrawable (getBitmapFromAsset("icons/fondoselec.png"));
-			//_fondo2.SetBackgroundDrawable (dr1);
-			_fondo2.SetBackgroundColor (Color.ParseColor ("#ff9600"));
+			Drawable dr1 = new BitmapDrawable (getBitmapFromAsset("icons/fondoselec.png"));
+			_fondo2.SetBackgroundDrawable (dr1);
+			//_fondo2.SetBackgroundColor (Color.ParseColor ("#eeebe8"));
+			//_fondo2.SetBackgroundColor(Color.Transparent);
 			//dr1 = null;
 
 			_mainSpace.AddView (_fondo2);
@@ -421,6 +428,7 @@ namespace MLearning.Droid
 			infoCursoUnidad.SetGravity(Android.Views.GravityFlags.Right);
 			infoCursoUnidad.SetPadding (Configuration.getWidth(30), Configuration.getWidth (25), Configuration.getWidth(30), Configuration.getWidth (25));
 			infoCursoUnidad.SetBackgroundColor (Color.ParseColor ("#40000000"));
+
 
 			TextView _txtCurso = new TextView (context);
 			_txtCurso.Text = "LAS RUTAS";
@@ -640,7 +648,17 @@ namespace MLearning.Droid
 
 			//_mainLayout.AddView (_contentScrollView_S2);
 
+		
+
+			//ListViewAdapter listViewAdapter = new ListViewAdapter (GetListOfCities ());
+			//listView.SetAdapter (listViewAdapter);
+			/*
+			ObjetoAdapter cityAdapter = new ObjetoAdapter (GetListOfCities ());
+			listView.SetAdapter (cityAdapter);*/
+
+
 			_mainSpace.AddView (_contentScrollView_S2);
+			//_mainSpace.AddView (listView);
 			//----------------------------------------------------------
 			/*
 			_listUnidades.Add(new UnidadItem{ Title = "Dia 1", Description = "Piscacucho-Wayllabamba" });
@@ -875,6 +893,7 @@ namespace MLearning.Droid
 				LinearLayout separationLinear = new LinearLayout (context);
 				separationLinear.LayoutParameters = new LinearLayout.LayoutParams (-1, 5);
 				separationLinear.SetBackgroundColor (Color.ParseColor ("#D8D8D8"));
+
 				separationLinear.Orientation = Orientation.Horizontal;
 
 

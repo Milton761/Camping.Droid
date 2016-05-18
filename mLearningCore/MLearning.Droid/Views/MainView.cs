@@ -27,6 +27,8 @@ using Android.Net;
 using Android.Media;
 using Core.DownloadCache;
 using Core.Session;
+using Com.Telerik.Widget.List;
+using Android.Support.V7.App;
 
 namespace MLearning.Droid.Views
 {
@@ -151,7 +153,6 @@ namespace MLearning.Droid.Views
 			
 			this.Window.AddFlags(WindowManagerFlags.Fullscreen);
 			base.OnCreate(bundle);
-
 
 			SetContentView(Resource.Layout.MainView);
 			player = new Android.Media.MediaPlayer();
@@ -464,18 +465,7 @@ namespace MLearning.Droid.Views
 			txtUserRol.Gravity = GravityFlags.CenterHorizontal;
 			txtCurse.Gravity = GravityFlags.CenterHorizontal;
 
-			/*
-			imgChat.SetImageBitmap (Bitmap.CreateScaledBitmap (getBitmapFromAsset("icons/chat.png"),Configuration.getWidth (45), Configuration.getWidth (40),true));
-			imgUser.SetImageBitmap (Bitmap.CreateScaledBitmap (getBitmapFromAsset("icons/user.png"),Configuration.getWidth (154), Configuration.getHeight (154),true));
-			imgSchool.SetImageBitmap (Bitmap.CreateScaledBitmap (getBitmapFromAsset("icons/colegio.png"),Configuration.getWidth (29), Configuration.getHeight (29),true));
-			imgNotificacion.SetImageBitmap (Bitmap.CreateScaledBitmap (getBitmapFromAsset("icons/notif.png"),Configuration.getWidth (35), Configuration.getWidth (40),true));
-			imgCurse.SetImageBitmap (Bitmap.CreateScaledBitmap (getBitmapFromAsset("icons/curso.png"),Configuration.getWidth (23), Configuration.getHeight (28),true));
-			imgTask.SetImageBitmap (Bitmap.CreateScaledBitmap (getBitmapFromAsset("icons/vertareas.png"),Configuration.getWidth (23), Configuration.getHeight (28),true));
 
-			Drawable drPendiente = new BitmapDrawable (Bitmap.CreateScaledBitmap (getBitmapFromAsset ("icons/pendiente.png"), Configuration.getWidth(30), Configuration.getWidth(30), true));
-			linearPendiente.SetBackgroundDrawable (drPendiente);
-			drPendiente = null;
-*/
 			imgCurse.SetPadding (Configuration.getWidth (68), 0, 0, 0);
 			imgTask.SetPadding(Configuration.getWidth(68),0,0,0);
 
@@ -683,33 +673,6 @@ namespace MLearning.Droid.Views
 
 			}
 		}
-		/*
-		void Vm_LOsInCircle_CollectionChanged (object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
-		{
-			//populateLoInCircle (e.NewStartingIndex);
-			//Console.WriteLine ("E : " + e.NewStartingIndex);
-		}
-
-		void populateLoInCircle (int index){
-
-			if (vm.LOsInCircle != null) {
-				//Console.WriteLine ("ENTREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
-				for (int i = 0; i < vm.LOsInCircle.Count; i++) {
-					//Console.WriteLine ("CONTANDOOOOOOOOOOOOOOO");
-					if (vm.LOsInCircle [i].stack.IsLoaded) {				
-						s_list = vm.LOsInCircle [i].stack.StacksList;
-
-
-
-					}
-				}
-			}
-
-			Console.WriteLine ("____________________>FIN");
-
-
-		}
-		*/
 
 		void LOsection_CollectionChanged (object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
 		{
@@ -820,7 +783,6 @@ namespace MLearning.Droid.Views
 				lo.ListImages = list;
 
 
-
 			}
 
 
@@ -904,11 +866,6 @@ namespace MLearning.Droid.Views
 			{				
 				showHome ();
 			}
-			/*else if(e.Position == 1)//fotos
-			{
-				showHome ();
-				mDrawerLayout.CloseDrawer (mLeftDrawer);
-			}*/
 			else if(e.Position == 1)//rutas
 			{
 				if (_currentCurso == 0) {
@@ -978,11 +935,11 @@ namespace MLearning.Droid.Views
 			listRutas.Add (ruta2);
 			listRutas.Add (ruta3);
 
-			/*
-			ruta1.Click += delegate {showRutas();};
-			ruta2.Click += delegate {showRutas();};
-			ruta3.Click += delegate {showRutas();};
-			*/
+			
+			//ruta1.Click += delegate {showRutas();};
+			//ruta2.Click += delegate {showRutas();};
+			//ruta3.Click += delegate {showRutas();};
+
 
 		}
 
@@ -1105,19 +1062,21 @@ namespace MLearning.Droid.Views
 
 
 			//setIndex (lo._ListLOImages_S2 [0], new EventArgs ());
-			/*
-			MLearning.Core.ViewModels.MainViewModel.lo_by_circle_wrapper currentLearningObject = _CLO[0];
-			vm.OpenLOSectionListCommand.Execute(currentLearningObject);
-			*/
+
+			//MLearning.Core.ViewModels.MainViewModel.lo_by_circle_wrapper currentLearningObject = _CLO[0];
+			//vm.OpenLOSectionListCommand.Execute(currentLearningObject);
+
 
 		}
 
 		public void showRutas()			{showCurso (0);lo.header.SetBackgroundDrawable (headersDR[0]);lo._contentScrollView_S2.SetBackgroundColor (Color.ParseColor ("#FFBF00"));}
 		public void showServicios()		{showCurso (1);lo.header.SetBackgroundDrawable (headersDR[1]);lo._contentScrollView_S2.SetBackgroundColor (Color.ParseColor ("#00FFFF"));}
 		public void showGuiaSilvestre()	{showCurso (2);lo.header.SetBackgroundDrawable (headersDR[2]);lo._contentScrollView_S2.SetBackgroundColor (Color.ParseColor ("#74DF00"));}
-		public void showCifras()		{showCurso (3);lo.header.SetBackgroundDrawable (headersDR[3]);lo._contentScrollView_S2.SetBackgroundColor (Color.ParseColor ("#8258FA"));}
+		public void showCifras()		{showCurso (3);lo.header.SetBackgroundDrawable (headersDR[3]);lo._contentScrollView_S2.SetBackgroundColor (Color.ParseColor ("#f5ac10"));}
 
-
+		public void test_Telerik(){
+			//RadListView listview = new RadListView ();
+		}
 
 
 		public void initLinearInfo()
@@ -1362,11 +1321,11 @@ namespace MLearning.Droid.Views
 
 
 			var imgview = sender as ImageLOView;
-			/*
-			if (_currentUnidad == imgview.index) {
-				return;		
-			}
-			*/
+
+			//if (_currentUnidad == imgview.index) {
+			//	return;		
+			//}
+			
 			_currentUnidad = imgview.index;
 
 
@@ -1597,12 +1556,6 @@ namespace MLearning.Droid.Views
 		}
 
 
-		/*
-		void resetComments(){
-			
-		}
-       
-		*/
 
 		//toolbar codes requisites
 
@@ -1841,7 +1794,6 @@ namespace MLearning.Droid.Views
 			}
 			#endregion
 		}
-
 
 
 	}
