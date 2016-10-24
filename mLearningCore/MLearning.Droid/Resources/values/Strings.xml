@@ -4,4 +4,7 @@
     <string name="ApplicationName">MLearning.Droid</string>
     <string name="openDrawer">Drawer Open</string>
 	<string name="closeDrawer">Drawer Closed</string>
+	<string name="LOGIN_USER">pcamping</string>
+
+	<string name="mejorescampamentos50">The 50 best camping sites</string>
 </resources>

@@ -1,15 +1,33 @@
 ﻿<Properties StartupItem="MLearning.Droid/GuiaCamping.csproj">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MLearning.Droid/Views/MainView.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MLearning.Droid/DataSource/LOSlideSource.cs">
     <Files>
-      <File FileName="MLearning.Droid/Views/WallView.cs" Line="651" Column="3" />
-      <File FileName="MLearning.Droid/Views/MainView.cs" Line="1070" Column="1" />
+      <File FileName="MLearning.Droid/Views/WallView.cs" Line="251" Column="97" />
+      <File FileName="MLearning.Droid/Views/MainView.cs" Line="1405" Column="21" />
       <File FileName="MLearning.Droid/Views/frontView.cs" Line="1" Column="1" />
       <File FileName="MLearning.Droid/Views/Configuration.cs" Line="1" Column="1" />
       <File FileName="MLearning.Droid/Views/ImageLOView.cs" Line="1" Column="1" />
       <File FileName="MLearning.Droid/Views/LOContainerView.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Droid/Views/Template2.cs" Line="137" Column="4" />
+      <File FileName="MLearning.Droid/Views/LOView.cs" Line="485" Column="31" />
+      <File FileName="MLearning.Droid/DataSource/LOSlideSource.cs" Line="205" Column="17" />
+      <File FileName="MLearning.Core/Repositories/IRepositoryService.cs" Line="20" Column="3" />
+      <File FileName="MLearning.Core/Repositories/WAMSRepositoryService.cs" Line="455" Column="4" />
+      <File FileName="MLearning.Core/ViewModels/LOViewModel.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Core/ViewModels/AuthViewModel.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Core/ViewModels/LoginViewModel.cs" Line="52" Column="4" />
+      <File FileName="MLearning.Core/ViewModels/IUserInfo.cs" Line="11" Column="1" />
+      <File FileName="MLearning.Core/App.cs" Line="32" Column="14" />
+      <File FileName="MLearning.Core/Services/IMLearningService.cs" Line="1" Column="1" />
+      <File FileName="MLearning.Core/Services/MLearningAzureService.cs" Line="213" Column="155" />
+      <File FileName="MLearning.Core/ViewModels/MainViewModel.cs" Line="876" Column="2" />
+      <File FileName="MLearning.Droid/Setup.cs" Line="25" Column="3" />
+      <File FileName="MLearning.Droid/UserInfo.cs" Line="28" Column="2" />
+      <File FileName="MLearning.Droid/Resources/values/Strings.xml" Line="9" Column="63" />
+      <File FileName="MLearning.Droid/Resources/values-es/Strings.xml" Line="9" Column="73" />
+      <File FileName="MLearning.Core/ViewModels/LOMapViewModel.cs" Line="440" Column="54" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 5 (KitKat)" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/aocsa/Documents/proyectos/milton/Hitec.Droid dec 4/mLearningCore/MLearning.Droid/Views/MainView.cs" line="764" column="1" />
@@ -21,8 +39,9 @@
       <Breakpoint file="/Users/mac/Documents/git projects/new/GuiaCamping/Camping.Droid/mLearningCore/MLearning.Droid/Views/LOMapView.cs" line="390" column="44" />
       <Breakpoint file="/Users/mac/Documents/git projects/new/GuiaCamping/Camping.Droid/mLearningCore/MLearning.Droid/Views/LOMapView.cs" line="220" column="43" />
       <Breakpoint file="/Users/mac/Documents/git projects/new/GuiaCamping/Camping.Droid/mLearningCore/MLearning.Droid/Views/LOView.cs" line="219" column="43" />
+      <Breakpoint file="/Users/imacalex/gitProjects/Camping.Droid/mLearningCore/MLearning.Droid/Views/WallView.cs" line="872" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.GuiaCamping AndroidDesignerPreferredDevice="Nexus 4" />
+  <MonoDevelop.Ide.ItemProperties.GuiaCamping AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Nexus 7 (Marshmallow)" />
 </Properties>

@@ -183,7 +183,7 @@ namespace MLearning.Core.ViewModels
 
         public class lo_by_circle_wrapper : MvxNotifyPropertyChanged
         { 
-            public lo_by_circle lo {get;set;}
+            public lo_in_circle lo {get;set;}
 
             byte[] _cover_bytes;
             public byte[] cover_bytes
@@ -728,7 +728,7 @@ namespace MLearning.Core.ViewModels
 
             try
             {
-                List<lo_by_circle> list = LearningOjectsList.Select(lo => lo.lo).ToList();
+                List<lo_in_circle> list = LearningOjectsList.Select(lo => lo.lo).ToList();
 
 
 
@@ -794,7 +794,7 @@ namespace MLearning.Core.ViewModels
 
 			try
 			{
-				List<lo_by_circle> list = LearningOjectsList.Select(lo => lo.lo).ToList();
+				List<lo_in_circle> list = LearningOjectsList.Select(lo => lo.lo).ToList();
 
 
 
@@ -872,7 +872,10 @@ namespace MLearning.Core.ViewModels
 							Debug.WriteLine("indexList", "result...: " + list.Count);
 
 
-							var indexTmp = new Dictionary<int, IList<Page> > ();
+							/** Problema: Datos no Ordenados por ID
+ 							 *  Solucion: Usar in SortedDictionary
+ 							 * */
+							var indexTmp = new SortedDictionary<int, IList<Page>>();
 							foreach(var page in list) {
 								IList<Page> resultTmp;
 								if ( ! indexTmp.TryGetValue((int)page.LOsection_id, out resultTmp ) ) {
@@ -1286,7 +1289,7 @@ namespace MLearning.Core.ViewModels
             if (LearningOjectsList != null)
                 LearningOjectsList.Clear();
 
-            var list = await _mLearningService.GetLOByCircleAndUser(circle_id,UserID);
+            var list = await _mLearningService.GetLOByCircle(circle_id);
 
             int circleIndex = CirclesList.IndexOf(CirclesList.Where(c => c.id == circle_id).First());
 

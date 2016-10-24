@@ -19,6 +19,7 @@
     <NuGetPackageImportStamp>dd1dafb8</NuGetPackageImportStamp>
     <ReleaseVersion>1.0</ReleaseVersion>
     <SynchReleaseVersion>false</SynchReleaseVersion>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -247,6 +248,7 @@
     <Compile Include="Views\LinearLayoutLO.cs" />
     <Compile Include="Views\JustifiedTextView.cs" />
     <Compile Include="Resources\AddResources.cs" />
+    <Compile Include="UserInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -333,6 +335,7 @@
     <AndroidResource Include="Resources\drawable\transparent.png" />
     <AndroidResource Include="Resources\drawable\splash.png" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\values-es\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -373,6 +376,7 @@
     <Folder Include="DataSource\" />
     <Folder Include="Assets\fonts\" />
     <Folder Include="Assets\database\" />
+    <Folder Include="Resources\values-es\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\icons\logo.png" />

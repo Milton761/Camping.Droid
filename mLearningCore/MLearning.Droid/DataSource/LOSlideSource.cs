@@ -197,12 +197,36 @@ namespace DataSource
 
 			if (_type == 1) {
 				Template1 plantilla = new Template1 (context);
-				plantilla.Title = _title;
+
 				plantilla.Author = _author;
+
+				if (_title == null) { _title = ""; }
+
+				if (!_title.Equals(""))
+				{
+					List<string> elements = parseContent(_title);
+					//Console.WriteLine (String.Format("Holaaaa {0}",elements.Count));
+
+
+					if (elements.Count != 0 && elements[0] == "@")
+					{//Console.WriteLine (elements.ToString());
+
+
+						if (elements[2].Equals("#NONE"))
+						{
+							plantilla.ColorTexto = elements[1];
+						}
+						else {
+							plantilla.ColorTexto = _colorS;
+						}
+					}
+				
+				}
+				plantilla.Title = _title;
 
 				plantilla.ImageUrl = _imageurl;//<----------HUILLCA
 				plantilla.Contenido = eraseLastBR(_paragraph);;
-				plantilla.ColorTexto = _colorS;
+
 				//Console.WriteLine ("CREA PLANTILLAAAAAAAAA  111111");
 				return plantilla;
 
@@ -217,9 +241,18 @@ namespace DataSource
 
 
 				if (elements.Count != 0 && elements [0] == "@") {//Console.WriteLine (elements.ToString());
-					plantilla.ColorBackgroundTemplate = elements [1];
-					plantilla.ColorTitle = elements [2];
-					plantilla.ColorDescription = elements [2];
+					
+
+					if (!elements[2].Equals("#NONE"))
+					{
+						plantilla.ColorDescription = elements[2];
+						plantilla.ColorTitle = elements[2];
+						plantilla.ColorBackgroundTemplate = elements[1];
+					}
+					else { 
+						plantilla.ColorTitle = elements[1];
+					}
+
 				} else {
 					plantilla.ColorTexto = _colorS;
 				}
@@ -229,7 +262,7 @@ namespace DataSource
 				plantilla.Contenido = eraseLastBR(_paragraph);
 
 				/*Datos básicos*/
-				if(_title.Equals("Datos básicos")){
+				if(_title.Equals("Datos básicos ")){
 					
 					string pathImg = "mapas/" + replaceForImages (title_page) + ".png";
 					plantilla.Image = getBitmapFromAsset(pathImg);

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="Hello">Hola mundo, Click Me!</string>
+    <string name="ApplicationName">MLearning.Droid</string>
+    <string name="openDrawer">Drawer abierto</string>
+	<string name="closeDrawer">Drawer cerrado</string>
+	<string name="LOGIN_USER">hitec</string>
+
+	<string name="mejorescampamentos50">Los 50 mejores campamentos</string>
+</resources>
+

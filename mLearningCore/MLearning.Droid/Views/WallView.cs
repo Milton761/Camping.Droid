@@ -248,7 +248,7 @@ namespace MLearning.Droid
 			_txtCursoN.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(55));
 			_txtUnidadN.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(50));
 			//Eliminando los subtitulos innecesarios
-			if (!_txtCursoN.Text.ToString().Equals("Los 50 mejores campamentos")) {
+			if (!_txtCursoN.Text.ToString().Equals(Resources.GetText(Resource.String.mejorescampamentos50))) {
 				_txtUnidadN.Text = _txtCursoN.Text;
 				_txtCursoN.Text = "   ";
 				_txtUnidadN.SetTextSize (ComplexUnitType.Fraction, Configuration.getHeight(55));

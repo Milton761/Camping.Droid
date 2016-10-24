@@ -24,7 +24,9 @@ namespace MLearning.Core
             int user_id;
             bool login = SessionService.HasLoggedIn(out username, out user_id);
 
-            if (login)
+            IUserInfo info = Mvx.Resolve<IUserInfo>();
+			
+			if (login && username.Equals(info.user()))
             {
                 RegisterAppStart<MainViewModel>();                
             }

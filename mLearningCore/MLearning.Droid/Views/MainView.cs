@@ -762,7 +762,7 @@ namespace MLearning.Droid.Views
 
 					imgLO.index = i;
 					imgLO.Title = vm.LearningOjectsList [i].lo.title;
-					imgLO.Author = vm.LearningOjectsList [i].lo.name + " " + vm.LearningOjectsList [i].lo.lastname;
+					//imgLO.Author = vm.LearningOjectsList [i].lo.name + " " + vm.LearningOjectsList [i].lo.lastname;
 
 					imgLO.Url = vm.LearningOjectsList [i].lo.url_cover;
 					imgLO.sBackgoundUrl = vm.LearningOjectsList [i].lo.url_background;
@@ -1190,7 +1190,7 @@ namespace MLearning.Droid.Views
 			lo.getWorkSpaceLayout.RemoveAllViews();
 			lo.getWorkSpaceLayout.AddView (_foro);
 
-			_foro.Author=vm.LearningOjectsList[lo.currentLOImageIndex].lo.name +" "+vm.LearningOjectsList[lo.currentLOImageIndex].lo.lastname;
+			//_foro.Author=vm.LearningOjectsList[lo.currentLOImageIndex].lo.name +" "+vm.LearningOjectsList[lo.currentLOImageIndex].lo.lastname;
 			_foro.NameLO = vm.LearningOjectsList [lo.currentLOImageIndex].lo.title;
 			_foro.Chapter = vm.LearningOjectsList [lo.currentLOImageIndex].lo.description;
 			_foro.CoverUrl = vm.LearningOjectsList [lo.currentLOImageIndex].lo.url_background;
@@ -1224,7 +1224,7 @@ namespace MLearning.Droid.Views
 			lo.getWorkSpaceLayout.AddView (task);
 
 
-			task.Author=vm.LearningOjectsList[lo.currentLOImageIndex].lo.name +" "+vm.LearningOjectsList[lo.currentLOImageIndex].lo.lastname;
+			//task.Author=vm.LearningOjectsList[lo.currentLOImageIndex].lo.name +" "+vm.LearningOjectsList[lo.currentLOImageIndex].lo.lastname;
 			task.NameLO = vm.LearningOjectsList [lo.currentLOImageIndex].lo.title;
 			task.Chapter = vm.LearningOjectsList [lo.currentLOImageIndex].lo.description;
 			task.CoverUrl = vm.LearningOjectsList [lo.currentLOImageIndex].lo.url_background;
@@ -1616,15 +1616,6 @@ namespace MLearning.Droid.Views
 		{
 
 
-			if (!GcmClient.IsRegistered(this))
-			{
-				GcmClient.CheckDevice(this);
-				GcmClient.CheckManifest(this);
-
-			
-				System.Diagnostics.Debug.WriteLine("Registering...");
-				GcmClient.Register(this, Core.Configuration.Constants.SenderID);
-			}
 		}
 
 

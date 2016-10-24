@@ -131,6 +131,7 @@
     <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\tag_by_lo.cs" />
     <Compile Include="ViewModels\LOMapViewModel.cs" />
+    <Compile Include="ViewModels\IUserInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">
